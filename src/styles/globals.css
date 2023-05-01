@@ -48,6 +48,7 @@ section{
   scroll-snap-align: start;
 }
 section:nth-child(2){
+  align-items: start;
   background: linear-gradient(to bottom, var(--main-pink), var(--main-yellow));
   }
 section:nth-child(3){  
@@ -86,16 +87,6 @@ section .text-container .text-box h3{
   margin-bottom: 10px;
 }
 
-@media (max-width: 900px){
-  section h1{
-    font-size: 2rem;
-    text-align: center;
-  }
-  section .text-container{
-    flex-direction: column;
-  }
-}
-
 .reveal{
   position: relative;
   transform: translateY(150px);
@@ -127,21 +118,123 @@ section .text-container .text-box h3{
 }
 
 #navbar {
-  position: fixed;
+  position: absolute;
+}
+
+.main-section {
+  margin-top: 190px;
+}
+
+#logo-icon {
+  width: 10rem;
 }
 
 #logo-text {
+  cursor: pointer;
   position: absolute;
   color: white;
-  margin-left: 40px;
+  margin-left: 55px;
   font-weight: 800;
 }
 
 #logo-text #txt-sunny {
-  font-size: 30px;
+  font-size: 45px;
 }
 
 #logo-text #txt-world {
-  font-size: 31px;
-  margin-top: -23px;
+  font-size: 45px;
+  margin-top: -35px;
+}
+
+#main-text-container {
+  font-weight: 800;
+  font-size: 45px;
+  z-index: 999;
+}
+
+#main-text-container #main-text {
+  margin-right: 190px;
+}
+
+#main-text-container #main-text-name {
+  text-align: center;
+}
+
+#main-text-container #main-text-name  #main-text-name-sub {
+  margin-top: -28px;
+  font-size: 33px;
+}
+#main-img {
+  margin-top: -60px;
+  width: 400px;
+}
+#sub-text-title {
+  font-size: 30px;
+  font-weight: 800;
+}
+#sub-text-detail {
+  font-size: 25px;
+}
+#sub-text-detail #highlight {
+  font-weight: 800;
+}
+
+@media (max-width: 900px){
+  section h1{
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container{
+    flex-direction: column;
+  }
+  .main-section {
+    margin-top: 100px;
+  }
+  #logo-icon {
+    width: 5rem;
+  }
+  #logo-text {
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    margin-left: 35px;
+    font-weight: 800;
+  }
+  #logo-text #txt-sunny {
+    font-size: 20px;
+  }
+  
+  #logo-text #txt-world {
+    font-size: 20px;
+    margin-top: -15px;
+  }
+  
+  #main-text-container {
+    font-weight: 800;
+    font-size:30px;
+  }
+  
+  #main-text-container #main-text {
+    margin-right: 40px;
+  }
+  
+  #main-text-container #main-text-name {
+    text-align: center;
+  }
+  
+  #main-text-container #main-text-name  #main-text-name-sub {
+    margin-top: -17px;
+    font-size: 23px;
+  }
+  #main-img {
+    margin-top: -20px;
+    width: 200px;
+  }
+  #sub-text-title {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  #sub-text-detail {
+    font-size: 18px;
+  }
 }

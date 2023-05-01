@@ -1,6 +1,6 @@
 const theme = {
   palette: {
-    darkpink: '#EA1F3E',
+    darkpink: '#F27084',
     pink: '#F7A8B4',
     yellow: '#F7EBA6',
     green: '#A6F7EB',

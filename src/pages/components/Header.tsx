@@ -1,21 +1,27 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import { IoMdSunny } from 'react-icons/io';
+import { MdSunny } from 'react-icons/md';
 import { theme } from '../../styles';
 
 export default function Header() {
   const [navbar, setNavbar] = useState(false);
+
+  function scrollUp(){
+    window.scrollTo(0,0);
+  }
 
   return (
     <nav className="w-full bg-transparent" id='navbar'>
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5">
-            <IoMdSunny color={theme.palette.darkpink} size='5rem'/>
-            <a href="#" id="logo-text">
+            <div id="logo-icon">
+              <MdSunny color={theme.palette.darkpink} size='100%'/>
+            </div>
+            <div onClick={scrollUp} id="logo-text">
               <p id="txt-sunny">SUNNY</p>
               <p id="txt-world">world</p>
-            </a>
+            </div>
             <div className="md:hidden">
               <button
                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
