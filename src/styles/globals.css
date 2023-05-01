@@ -3,27 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: #7F0C1D;
+  --main-pink: #F7A8B4;
+  --main-yellow: #F7EBA6;
+  --main-green: #A6F7EB;
+  --main-purple: #A6B2F7;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--foreground-rgb);
   -ms-overflow-style: none;
 }
 
@@ -51,19 +47,17 @@ section{
   align-items: center;
   scroll-snap-align: start;
 }
-section:nth-child(1){
-  color: #e0ffff;
-  }
 section:nth-child(2){
-  color: #42455a;
-  background: #e0ffff;
+  background: linear-gradient(to bottom, var(--main-pink), var(--main-yellow));
+  }
+section:nth-child(3){  
+  background: linear-gradient(to bottom, var(--main-yellow), var(--main-green));
 } 
-section:nth-child(3){
-  color: #e0ffff;
-}
 section:nth-child(4){
-  color: #42455a;
-  background: #e0ffff;
+  background: linear-gradient(to bottom, var(--main-green), var(--main-purple));
+}
+section:nth-child(5){
+  background: linear-gradient(to bottom, var(--main-purple), var(--main-pink));
 }
 section .slide{
   margin: 100px;
@@ -130,4 +124,24 @@ section .text-container .text-box h3{
   width: 20rem;
   background: #f03d3d;
   color: #fff;
+}
+
+#navbar {
+  position: fixed;
+}
+
+#logo-text {
+  position: absolute;
+  color: white;
+  margin-left: 40px;
+  font-weight: 800;
+}
+
+#logo-text #txt-sunny {
+  font-size: 30px;
+}
+
+#logo-text #txt-world {
+  font-size: 31px;
+  margin-top: -23px;
 }
