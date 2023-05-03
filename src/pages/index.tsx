@@ -30,7 +30,7 @@ export default function Home() {
         }
       });
     }, options);
-    
+
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   }, []);
 
@@ -41,17 +41,17 @@ export default function Home() {
       <FirstSection/>
       <SecondSection/>
       <ThirdSection/>
-      <div id="navigator-dots">
-        <div id="dots" onClick={(e)=>{scrollTo('#home', e)}}>
+      <div className="navigator-dots">
+        <div className="dots" onClick={(e)=>{scrollTo('#home', e)}}>
           <IoMdFlower/>
         </div>
-        <div id="dots" onClick={(e)=>{scrollTo('#belief', e)}}>
+        <div className="dots" onClick={(e)=>{scrollTo('#belief', e)}}>
           <IoMdFlower/>
         </div>
-        <div id="dots" onClick={(e)=>{scrollTo('#projects', e)}}>
+        <div className="dots" onClick={(e)=>{scrollTo('#projects', e)}}>
           <IoMdFlower/>
         </div>
-        <div id="dots" onClick={(e)=>{scrollTo('#contact', e)}}>
+        <div className="dots" onClick={(e)=>{scrollTo('#contact', e)}}>
           <IoMdFlower/>
         </div>
 

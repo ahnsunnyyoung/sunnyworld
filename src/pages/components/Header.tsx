@@ -9,9 +9,18 @@ export default function Header() {
   const [navbar, setNavbar] = useState(false);
 
   useEffect(() => {
-    gsap.to("#logo-icon", {
+    gsap.to("#logo-icon-svg", {
       rotate:'360',
       duration:3,
+    });
+
+    gsap.to("#contact-icon-svg", {
+      rotate:'360',
+      duration:3,
+      scrollTrigger: {
+        trigger: "#contact-icon",
+        toggleActions: 'restart'
+      },
     });
 
     gsap.to("#logo", {
@@ -64,6 +73,7 @@ export default function Header() {
         toggleActions: 'play none reverse none'
       },
     });
+
   }, []);
 
   const scrollTo = (id: string, e: { preventDefault: () => void; }) => {
@@ -78,7 +88,7 @@ export default function Header() {
           <div  id="logo-container">
             <div id="logo" className='flex align-content-center' onClick={(e)=>{scrollTo('#home', e)}}>
               <div id="logo-icon">
-                <MdSunny color={theme.palette.darkpink} size='100%'/>
+                <MdSunny id="logo-icon-svg" color={theme.palette.darkpink} size='100%'/>
               </div>
               <div id="logo-text">
                 <p id="txt-sunny">SUNNY</p>

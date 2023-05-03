@@ -28,9 +28,9 @@ body {
 }
 
 /* remove scroll bar */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} */
+}
 
 *{
   margin: 0;
@@ -51,16 +51,16 @@ section{
   align-items: center;
   /* scroll-snap-align: start; */
 }
-#navigator-dots {
+.navigator-dots {
   position: fixed;
   right: 3%;
   top: 45%;
 }
-#navigator-dots #dots {
+.navigator-dots .dots {
   cursor: pointer;
   margin: 1rem;
 }
-#navigator-dots #dots:hover {
+.navigator-dots .dots:hover {
   color: var(--main-darkpink);
 }
 #home{
@@ -94,7 +94,8 @@ section{
 #contact{
   background: linear-gradient(to bottom, var(--main-purple), var(--main-pink));
 }
-#contact .text-container .text-box .icon-box{
+#contact .icon-box{
+  padding-top: 2%;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -262,13 +263,21 @@ section .text-container .text-box h3{
   width: 100%;
 }
 
+.contact-table {
+  display: flex;
+  justify-content: space-around;
+}
 
-.contact-icon {
+#contact-icon {
   color: var(--main-yellow);
 }
 
-.contact-text {
+#contact-text {
   padding-top: 10px;
+}
+
+.contact-logo-container {
+  
 }
 
 
@@ -331,4 +340,8 @@ section .text-container .text-box h3{
     width: 30%;
     box-shadow: 3px 5px 5px 1px var(--main-darkpink);
   }
+  .contact-table {
+    display: block;
+  }
+  
 }
