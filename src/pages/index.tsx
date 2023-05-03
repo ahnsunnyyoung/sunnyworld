@@ -11,7 +11,7 @@ export default function Home() {
   const options = {
     root: null, // viewport
     rootMargin: "0px",
-    threshold: 1.0,  // 50%가 viewport에 들어와 있어야 callback 실행
+    threshold: 0.5,  // 50%가 viewport에 들어와 있어야 callback 실행
   }
 
   useEffect(() => {

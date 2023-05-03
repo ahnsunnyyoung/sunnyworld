@@ -6,19 +6,22 @@ import { theme } from '../../styles';
 export default function Header() {
   const [navbar, setNavbar] = useState(false);
 
-  function scrollUp(){
-    window.scrollTo(0,0);
+  const scrollTo = (id: string, e: { preventDefault: () => void; }) => {
+    const section = document.querySelector( id );
+    if (section){
+      section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+    }
   }
 
   return (
     <nav className="w-full bg-transparent" id='navbar'>
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
-          <div className="flex items-center justify-between py-3 md:py-5">
+          <div className="flex items-center justify-between py-3 md:py-5" onClick={(e)=>{scrollTo('#home', e)}}>
             <div id="logo-icon">
               <MdSunny color={theme.palette.darkpink} size='100%'/>
             </div>
-            <div onClick={scrollUp} id="logo-text">
+            <div id="logo-text">
               <p id="txt-sunny">SUNNY</p>
               <p id="txt-world">world</p>
             </div>
@@ -68,19 +71,19 @@ export default function Header() {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li>
-                <Link href="/blogs">
-                  Have
-                </Link>
+                <div className="nav-btn" onClick={(e)=>{scrollTo('#belief', e)}}>
+                  Belief
+                </div>
               </li>
               <li>
-                <Link href="/about">
-                  Done
-                </Link>
+                <div className="nav-btn" onClick={(e)=>{scrollTo('#projects', e)}}>
+                  Projects
+                </div>
               </li>
               <li>
-                <Link href="/contact">
-                  Do
-                </Link>
+                <div className="nav-btn" onClick={(e)=>{scrollTo('#contact', e)}}>
+                  Contact
+                </div>
               </li>
             </ul>
           </div>

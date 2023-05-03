@@ -1,30 +1,20 @@
+import { MdSunny } from 'react-icons/md';
+import { theme } from '../../styles';
 
 export default function ThirdSection() {
   return (
-    <section>
+    <section id='contact'>
         <div className="slide reveal">
-          <h2>Caption</h2>
+          <div>
+            <div>
+              
+            </div>
+          </div>
           <div className="text-container">
             <div className="text-box">
-              <h3>Section Text</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                eius molestiae perferendis eos provident vitae iste.
-              </p>
-            </div>
-            <div className="text-box">
-              <h3>Section Text</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                eius molestiae perferendis eos provident vitae iste.
-              </p>
-            </div>
-            <div className="text-box">
-              <h3>Section Text</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                eius molestiae perferendis eos provident vitae iste.
-              </p>
+              <div className="icon-box">
+                <MdSunny color={theme.palette.darkpink} size='100%'/>
+              </div>
             </div>
           </div>
         </div>

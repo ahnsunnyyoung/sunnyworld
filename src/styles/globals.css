@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "react-alice-carousel/lib/alice-carousel.css";
 
 :root {
   --foreground-rgb: #7F0C1D;
@@ -17,16 +18,18 @@
     --background-end-rgb: 0, 0, 0;
   }
 } */
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   color: var(--foreground-rgb);
   -ms-overflow-style: none;
 }
 
 /* remove scroll bar */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 *{
   margin: 0;
@@ -37,15 +40,15 @@ body {
 .main-container{
   width: 100%;
   height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  /* overflow-y: scroll; */
+  /* scroll-snap-type: y mandatory; */
 }
 section{
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 section:nth-child(2){
   align-items: start;
@@ -54,15 +57,34 @@ section:nth-child(2){
 section:nth-child(3){  
   background: linear-gradient(to bottom, var(--main-yellow), var(--main-green));
 } 
+section:nth-child(3) .text-container .text-box .icon-box{
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background-color: var(--main-pink);
+}
 section:nth-child(4){
   background: linear-gradient(to bottom, var(--main-green), var(--main-purple));
+}
+#carousel-container {
+  width: 70%;
 }
 section:nth-child(5){
   background: linear-gradient(to bottom, var(--main-purple), var(--main-pink));
 }
-section .slide{
-  margin: 100px;
+section:nth-child(5) .text-container .text-box .icon-box{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
 }
+/* section .slide{
+  margin: 100px;
+} */
 section h1{
   font-size: 3rem;
   margin: 20px;
@@ -76,9 +98,7 @@ section .text-container{
    display: flex;
 }
 section .text-container .text-box{
-  margin: 20px;
   padding: 20px;
-  background: #00c2cb;
 }
 section .text-container .text-box h3{
   font-size: 30px;
@@ -86,7 +106,6 @@ section .text-container .text-box h3{
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
 .reveal{
   position: relative;
   transform: translateY(150px);
@@ -107,7 +126,6 @@ section .text-container .text-box h3{
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  background-color: #febf00;
   transition: .4s;  
 }
 
@@ -118,7 +136,11 @@ section .text-container .text-box h3{
 }
 
 #navbar {
-  position: absolute;
+  position: fixed;
+}
+
+.nav-btn{
+  cursor: pointer;
 }
 
 .main-section {
@@ -178,6 +200,38 @@ section .text-container .text-box h3{
 #sub-text-detail #highlight {
   font-weight: 800;
 }
+.project-info {
+  color: black;
+}
+.project-year {
+  width: fit-content;
+  font-size: 20px;
+  border-bottom: #c5c5c5 solid 1px;
+  color: #929292;
+}
+.project-dur {
+  font-size: 25px;
+  font-weight: 500;
+}
+.project-category {
+  font-size: 15px;
+  color: #f76540;
+  font-weight: 600;
+}
+.project-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 20px 0px 20px;
+}
+.project-content {
+  color: #616161;
+  margin-bottom: 20px;
+}
+.project-type {
+  font-size: 15px;
+  font-weight: 600;
+}
+
 
 @media (max-width: 900px){
   section h1{
@@ -236,5 +290,16 @@ section .text-container .text-box h3{
   }
   #sub-text-detail {
     font-size: 18px;
+  }
+  section:nth-child(3) .text-container .text-box .icon-box{
+    margin: auto;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-color: var(--main-pink);
   }
 }

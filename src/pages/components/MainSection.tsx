@@ -4,7 +4,7 @@ import { theme } from '../../styles';
 
 export default function MainSection() {
   return (
-    <section>
+    <section id='home'>
       <div className='main-section'>
 
         <div className='flex justify-center' id='main-text-container'>
