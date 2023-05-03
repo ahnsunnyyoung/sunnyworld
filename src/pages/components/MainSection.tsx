@@ -1,11 +1,30 @@
-import React from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { theme } from '../../styles';
 
-
 export default function MainSection() {
+  const images = ["/profile_1.png", "/profile_2.png", "/profile_3.png"];
+  const [currentImg, setCurrentImg] = useState(0);
+
+  let switchImages = () => {
+    if (currentImg < images.length - 1) {
+      setCurrentImg(currentImg + 1);
+    } else {
+      setCurrentImg(0);
+    }
+  };
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      switchImages();
+    }, 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  });
+
   return (
     <section id='home'>
-      <div>
+      <div id='main-container'>
 
         <div className='flex justify-center' id='main-text-container'>
           <div id='main-text'>Hello, I'm</div>
@@ -22,7 +41,7 @@ export default function MainSection() {
 
         <div className='flex justify-center'>
           <img
-            src="/profile_1.png"
+            src={images[currentImg]}
             alt="Picture of Sunny"
             id='main-img'
           />

@@ -15,9 +15,8 @@ export default function Header() {
     });
 
     gsap.to("#logo", {
-      x:'40%',
+      x:'38%',
       y:'-40%',
-      duration:3,
       scrollTrigger: {
         trigger: "#belief",
         start: "0px 100%",
@@ -31,7 +30,6 @@ export default function Header() {
       x:'80%',
       y:'0%',
       immediateRender: false,
-      duration:3,
       scrollTrigger: {
         trigger: "#projects",
         start: "0px 100%",
@@ -51,6 +49,20 @@ export default function Header() {
         scrub: true,
         toggleActions: 'play pause reverse pause'
       }
+    });
+
+    gsap.to("#main-container", {
+      opacity:'100%',
+      duration:3,
+    });
+    gsap.to("#main-container", {
+      opacity:0,
+      scrollTrigger: {
+        trigger: "#belief",
+        start: "0px 70%",
+        end: "0px 30%",
+        toggleActions: 'play none reverse none'
+      },
     });
   }, []);
 

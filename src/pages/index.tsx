@@ -1,5 +1,4 @@
 import React, { useEffect, } from "react";
-import { Inter } from 'next/font/google'
 import Header from './components/Header';
 import MainSection from './components/MainSection';
 import FirstSection from './components/FirstSection';

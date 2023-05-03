@@ -1,9 +1,10 @@
-import { MdSunny } from 'react-icons/md';
 import { GiStairsGoal, GiArtificialHive } from 'react-icons/gi';
 import { BsBarChartSteps } from 'react-icons/bs';
 import { theme } from '../../styles';
 
 export default function FirstSection() {
+  
+  
   return (
     <section id='belief'>
         <div className="slide reveal">
