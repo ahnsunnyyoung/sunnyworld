@@ -12,7 +12,7 @@ export default function FirstSection() {
               <div className="icon-box">
                 <GiStairsGoal color={theme.palette.white} size='50%'/>
               </div>
-              <p>
+              <p className='text-title'>
                 Goal Oriented
               </p>
             </div>
@@ -20,7 +20,7 @@ export default function FirstSection() {
               <div className="icon-box">
                 <BsBarChartSteps color={theme.palette.white} size='50%'/>
               </div>
-              <p>
+              <p className='text-title'>
                 Solid Basic
               </p>
             </div>
@@ -28,7 +28,7 @@ export default function FirstSection() {
               <div className="icon-box">
                 <GiArtificialHive color={theme.palette.white} size='50%'/>
               </div>
-              <p>
+              <p className='text-title'>
                 Data Scientist
               </p>
             </div>

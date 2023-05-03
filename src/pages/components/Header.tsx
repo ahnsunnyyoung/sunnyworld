@@ -71,6 +71,11 @@ export default function Header() {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li>
+                <div className="nav-btn" onClick={(e)=>{scrollTo('#home', e)}}>
+                  Sunny
+                </div>
+              </li>
+              <li>
                 <div className="nav-btn" onClick={(e)=>{scrollTo('#belief', e)}}>
                   Belief
                 </div>
