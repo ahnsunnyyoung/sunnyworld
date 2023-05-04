@@ -19,31 +19,51 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const items_data = [
   {
-    'year': 2020,
+    'year': 2022,
+    'month': 'June',
+    'category': 'React • javascript • AWS • Agile',
+    'title': 'JjinMotjib',
+    'content': 'AI advertising filtering service website for restaurant search engine web application.',
+    'type': 'Individual',
+    'position': 'Frontend Developer',
+    'img': 'jjinmotjib.png'
+  },
+  {
+    'year': 2022,
     'month': 'May',
-    'category': 'React',
-    'title': 'Today\'s Covid',
-    'content': 'Developed a mobile application that visualizes COVID data.',
+    'category': 'Android • kotlin • SQLite',
+    'title': 'Myoungji class registration App',
+    'content': 'Myongji University class registration Android app.',
     'type': 'Individual',
     'position': 'Frontend Developer'
   },
   {
     'year': 2020,
-    'month': 'May',
-    'category': 'React',
+    'month': 'July',
+    'category': 'React • expo',
     'title': 'Today\'s Covid',
-    'content': 'Developed a mobile application that visualizes COVID data.',
+    'content': 'Mobile application that visualizes COVID data.',
+    'type': 'Team',
+    'position': 'Frontend Developer',
+    'img': 'todayscovid19.png'
+  },
+  {
+    'year': 2020,
+    'month': 'May',
+    'category': 'React-Redux • React Native',
+    'title': 'StockSunny',
+    'content': 'Basic stock information website and cross-platform mobile application.',
     'type': 'Individual',
     'position': 'Frontend Developer'
   },
   {
     'year': 2020,
-    'month': 'May',
-    'category': 'React',
-    'title': 'Today\'s Covid',
-    'content': 'Developed a mobile application that visualizes COVID data.',
+    'month': 'Feb',
+    'category': 'Tensorflow • PyTorch • Keras • Pandas',
+    'title': 'Music genre Classification',
+    'content': 'Research of audio-genre prediction model using the FMA dataset and CNN/RNN techniques in consideration of the characteristics as images through the melspectogram of audio, and the temporal properties of music.',
     'type': 'Individual',
-    'position': 'Frontend Developer'
+    'position': 'Data Scientist'
   },
 ]
 
@@ -64,13 +84,16 @@ items_data.forEach(function(item){
           {item.type=='Individual'
             ? 
             <Grid container>
-              <Grid item xs={2}><FaUserAlt/></Grid>
-              <Grid className='project-type' item xs={10}>Individual</Grid>
+              <Grid item xs={2}><FaUserAlt size='50%'/></Grid>
+              <Grid className='project-type' item xs={10}>{item.type}</Grid>
             </Grid>
             : 
             <Grid container>
-              <Grid item xs={2}><FaUserFriends/></Grid>
-              <Grid className='project-type' item xs={10}>Team</Grid>
+              <Grid item xs={2}><FaUserFriends size='50%'/></Grid>
+              <Grid className='project-type' item xs={10}>
+                <div>{item.type}</div>
+                <div className='project-type-position'>{item.position}</div>
+              </Grid>
             </Grid>
           }
         </Grid>

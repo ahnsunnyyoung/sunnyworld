@@ -14,18 +14,9 @@ export default function Header() {
       duration:3,
     });
 
-    gsap.to("#contact-icon-svg", {
-      rotate:'360',
-      duration:3,
-      scrollTrigger: {
-        trigger: "#contact-icon",
-        toggleActions: 'restart'
-      },
-    });
-
     gsap.to("#logo", {
       x:'38%',
-      y:'-40%',
+      y:'-50%',
       scrollTrigger: {
         trigger: "#belief",
         start: "0px 100%",
@@ -39,6 +30,28 @@ export default function Header() {
       x:'80%',
       y:'0%',
       immediateRender: false,
+      scrollTrigger: {
+        trigger: "#projects",
+        start: "0px 100%",
+        end: "0px 0%",
+        scrub: true,
+        toggleActions: 'play pause reverse pause'
+      }
+    });
+
+    gsap.to("#logo-icon-svg", {
+      rotate:'360',
+      scrollTrigger: {
+        trigger: "#belief",
+        start: "0px 100%",
+        end: "0px 0%",
+        scrub: true,
+        toggleActions: 'play pause reverse pause'
+      },
+    });
+
+    gsap.to("#logo-icon-svg", {
+      rotate:'360',
       scrollTrigger: {
         trigger: "#projects",
         start: "0px 100%",
