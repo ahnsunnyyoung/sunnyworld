@@ -2,29 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 @import "react-alice-carousel/lib/alice-carousel.css";
+@font-face {
+  font-family: 'KCC-Ganpan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --foreground-rgb: white;
-  --main-pink: #F7A8B4;
+  --main-pink: #F48B9B;
   --main-darkpink: #F27084;
-  --main-yellow: #F7EBA6;
-  --main-green: #A6F7EB;
-  --main-purple: #A6B2F7;
+  --main-yellow: #F4E48A;
+  --main-green: #8AF4E4;
+  --main-purple: #8A9AF4;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
 html {
   scroll-behavior: smooth;
 }
 body {
   color: var(--foreground-rgb);
   -ms-overflow-style: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 /* remove scroll bar */
@@ -33,10 +35,10 @@ body {
 }
 
 *{
+  font-family: 'KCC-Ganpan';
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Asap", sans-serif;
 }
 .main-container{
   width: 100%;
@@ -69,6 +71,16 @@ section{
 #belief{  
   background: linear-gradient(to bottom, var(--main-yellow), var(--main-green));
 } 
+#belief .text-container .text-box {
+  color: #190206;
+  border-radius: 15px;
+  width: 25%;
+  margin: 10px;
+}
+#belief .text-container .text-box:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+}
 #belief .text-container .text-box .icon-box{
   margin: 2rem;
   display: flex;
@@ -82,8 +94,14 @@ section{
 }
 #belief .text-container .text-box .text-title{
   text-align: center;
-  font-size: 30px;
+  font-size: 1.7rem;
   font-weight: 600;
+}
+#belief .text-container .text-box .text-description{
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 200;
+  font-style: italic;
 }
 #projects{
   background: linear-gradient(to bottom, var(--main-green), var(--main-purple));
@@ -202,15 +220,18 @@ section .text-container .text-box h3{
 
 #main-text-container #main-text {
   margin-right: 190px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 #main-text-container #main-text-name {
   text-align: center;
+  font-size: 55px;
 }
 
 #main-text-container #main-text-name  #main-text-name-sub {
   margin-top: -28px;
-  font-size: 33px;
+  font-size: 40px;
 }
 #main-img {
   margin-top: -60px;
@@ -228,7 +249,14 @@ section .text-container .text-box h3{
   color: var(--main-darkpink);
 }
 .project-info {
+  margin: 10px;
   color: black;
+  padding: 20px;
+}
+.project-info:hover {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  /* border: #616161 solid 1px; */
 }
 .project-year {
   width: fit-content;
@@ -252,20 +280,39 @@ section .text-container .text-box h3{
 }
 .project-content {
   color: #616161;
-  margin-bottom: 20px;
+  margin-bottom: 1.2rem;
 }
 .project-type {
   font-size: 15px;
   font-weight: 600;
 }
-
-.contact-container {
+.project-type-position {
+  font-size: 14px;
+  font-weight: 100;
+}
+.contact-title {
+  text-align: center;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 600;
+}
+.contact-info {
   width: 100%;
 }
 
 .contact-table {
   display: flex;
   justify-content: space-around;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-col {
+  width: 50%;
 }
 
 #contact-icon {
@@ -276,8 +323,9 @@ section .text-container .text-box h3{
   padding-top: 10px;
 }
 
-.contact-logo-container {
-  
+.contact-youtube {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 
@@ -308,8 +356,7 @@ section .text-container .text-box h3{
   }
   
   #main-text-container {
-    font-weight: 800;
-    font-size:30px;
+    font-size:28px;
   }
   
   #main-text-container #main-text {
@@ -317,8 +364,8 @@ section .text-container .text-box h3{
   }
   
   #main-text-container #main-text-name {
-    text-align: center;
-  }
+    font-size: 35px;
+}
   
   #main-text-container #main-text-name  #main-text-name-sub {
     margin-top: -17px;
@@ -335,13 +382,56 @@ section .text-container .text-box h3{
   #sub-text-detail {
     font-size: 18px;
   }
+  #belief .text-container .text-box {
+    width: 100%;
+  }
   #belief .text-container .text-box .icon-box{
     margin: auto;
     width: 30%;
     box-shadow: 3px 5px 5px 1px var(--main-darkpink);
   }
+  #belief .text-container .text-box .text-title{
+    font-size: 1.2rem;
+  }
+  #belief .text-container .text-box .text-description{
+    font-size: 0.8rem;
+  }
+  .project-year {
+    font-size: 17px;
+  }
+  .project-dur {
+    font-size: 20px;
+  }
+  .project-category {
+    font-size: 12px;
+  }
+  .project-title {
+    font-size: 20px;
+  }
+  .project-content {
+    font-size: 15px;
+  }
+  .project-type {
+    font-size: 12px;
+  }
+  .project-type-position {
+    font-size: 11px;
+    font-weight: 100;
+  }
   .contact-table {
     display: block;
+  }
+  .contact-title {
+    font-size: 30px;
+    margin-bottom: 0px;
+  }
+  .contact-info {
+    margin-top: 10px;
+    font-size: 8px;
+  }
+  .contact-youtube {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   
 }
