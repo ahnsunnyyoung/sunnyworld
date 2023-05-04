@@ -27,7 +27,7 @@ export default function MainSection() {
       <div id='main-container'>
 
         <div className='flex justify-center' id='main-text-container'>
-          <div id='main-text'>Hello, I'm</div>
+          <div id='main-text'>Hello, I&apos;m</div>
           <div id='main-text-name'>
             <div>
               <span>SUN</span><span style={{color:theme.palette.darkpink}}>N</span><span>Y</span>
