@@ -16,6 +16,10 @@ export default function FirstSection() {
               <p className='text-title'>
                 Goal Oriented
               </p>
+              <p className='text-description'>
+                My goal is to create visually stunning and intuitive 
+                user interfaces that not only meet but exceed client expectations.
+              </p>
             </div>
             <div className="text-box">
               <div className="icon-box">
@@ -24,6 +28,9 @@ export default function FirstSection() {
               <p className='text-title'>
                 Solid Basic
               </p>
+              <p className='text-description'>
+                From HTML, CSS, and JavaScript to responsive design and cross-browser compatibility.
+              </p>
             </div>
             <div className="text-box">
               <div className="icon-box">
@@ -31,6 +38,9 @@ export default function FirstSection() {
               </div>
               <p className='text-title'>
                 Data Scientist
+              </p>
+              <p className='text-description'>
+                Ability to create intelligent and interactive user interfaces that deliver personalized experiences and drive engagement.
               </p>
             </div>
           </div>
