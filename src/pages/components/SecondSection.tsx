@@ -59,43 +59,7 @@ const items_data = [
   },
 ]
 
-const items: any[] | undefined = [];
-
-items_data.forEach(function(item){
-  items.push(
-    <div className='projects-contents-wrapper'>
-      <Grid container>
-        <Grid item xs={3}>
-          <div className='project-year'>{item.year}</div>
-          <div className='project-dur'>{item.month}</div>
-        </Grid>
-        <Grid item xs={9}>
-          <div className='project-category'>{item.category}</div>
-          <div className='project-title'>{item.title}</div>
-          <div className='project-content'>{item.content}</div>
-          {item.type=='Individual'
-            ? 
-            <Grid container>
-              <Grid item xs={2}><FaUserAlt size='50%'/></Grid>
-              <Grid className='project-type' item xs={10}>{item.type}</Grid>
-            </Grid>
-            : 
-            <Grid container>
-              <Grid item xs={2}><FaUserFriends size='50%'/></Grid>
-              <Grid className='project-type' item xs={10}>
-                <div>{item.type}</div>
-                <div className='project-type-position'>{item.position}</div>
-              </Grid>
-            </Grid>
-          }
-        </Grid>
-      </Grid>
-    </div>
-)
-});
-
 export default function SecondSection() {
-  const [responsive, setResponsive] = useState({})
   
   function mouseover (params:any, e:any) {
     const contents = document.getElementById(`projects-contents-${params}`);
@@ -126,15 +90,6 @@ export default function SecondSection() {
       title.classList.replace("projects-title-transform","projects-title");
     }
   }    
-  // useEffect(() => setResponsive({
-  //   0: {
-  //     items: 1,
-  //   },
-  //   1024: {
-  //       items: 3,
-  //       itemsFit: 'contain'
-  //   }
-  // }), [])
 
   return (
     <section id='projects'>
@@ -184,10 +139,10 @@ export default function SecondSection() {
               </div>
             </div>
 
-            <ul>
+            <ul className="projects-list">
             {items_data.map(function(item, i){
-                return (
-                  <li>
+              return (
+                <li>
                   <div className="projects-row" onMouseOver={(e)=>{mouseover(i, e)}} onMouseLeave={(e)=>{mouseleave(i, e)}} >
                     <div className="projects-row-left">
                       <div className="projects-selected-wrapper">

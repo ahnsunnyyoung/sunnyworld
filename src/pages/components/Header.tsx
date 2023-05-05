@@ -79,13 +79,15 @@ export default function Header() {
     });
     gsap.to("#main-container", {
       opacity:0,
+      duration:1,
       scrollTrigger: {
         trigger: "#belief",
-        start: "0px 70%",
-        end: "0px 30%",
-        toggleActions: 'play none reverse none'
+        start: "0px 50%",
+        end: "0px 0%",
+        toggleActions: 'play none reverse reverse'
       },
     });
+
 
   }, []);
 

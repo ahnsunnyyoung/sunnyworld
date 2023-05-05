@@ -7,7 +7,7 @@ export default function FirstSection() {
   
   return (
     <section id='belief'>
-        <div className="slide reveal">
+        <div className="slide reveal"  id='projects-div'>
           <div className="text-container">
             <div className="text-box">
               <div className="icon-box">

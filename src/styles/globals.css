@@ -17,9 +17,9 @@
   --main-green: #8AF4E4;
   --main-purple: #8A9AF4;
 
-  --left-right-margin: 240px;
+  --left-right-margin: 24px;
   --left-right-internal-margin: 24px;
-  --top-margin: 240px;
+  --top-margin: 10px;
   --top-margin-mobile: 40vh;
   --top-internal-margin: 24px;
   --border-radius: 48px;
@@ -73,6 +73,7 @@ section{
 .navigator-dots .dots {
   cursor: pointer;
   margin: 1rem;
+  transition: 0.5s;
 }
 .navigator-dots .dots:hover {
   color: var(--main-darkpink);
@@ -276,11 +277,8 @@ section .text-container .text-box h3{
   padding-right: var(--left-right-internal-margin);;
 }
 .projects-show {
-  animation: fadeIn 1s; 
-}
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  transition: 1s;
+  opacity: 1 !important;
 }
 .projects-right {
   padding: 0 0 0 var(--left-right-internal-margin);
@@ -314,6 +312,10 @@ section .text-container .text-box h3{
 }
 .page-head .elements-number {
   letter-spacing: -.1em;
+}
+.projects-list {
+  margin-top: var(--top-margin);
+  border-top: var(--border) solid #606887;
 }
 .projects-right ul .projects-row {
   position: relative;
