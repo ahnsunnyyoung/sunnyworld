@@ -193,12 +193,6 @@ section .text-container .text-box h3{
   transition: .4s;  
 }
 
-.box.active {
-  width: 20rem;
-  background: #f03d3d;
-  color: #fff;
-}
-
 #navbar {
   position: fixed;
   z-index: 999;
@@ -228,7 +222,6 @@ section .text-container .text-box h3{
   cursor: pointer;
   margin-top: 2rem;
   text-shadow: 1px 1px var(--tea-rose-red);
-  color: var(--ghost-white);
   font-weight: 100;
 }
 #logo-text #txt-sunny {
@@ -720,6 +713,9 @@ table tr:last-child td {
     font-size: var(--r-h5-font-size);
   }
 
+  .contact-container {
+    padding-top: 40%;
+  }
   .contact-content {
     flex-direction: column;
   }

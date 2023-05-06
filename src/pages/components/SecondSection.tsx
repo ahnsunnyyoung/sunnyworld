@@ -104,11 +104,11 @@ export default function SecondSection() {
         <div className="slide reveal projects">
         {/* <AliceCarousel mouseTracking items={items} responsive={responsive} disableButtonsControls={true}/> */}
           <div className='projects-left'>
-            <div className='projects-contents-wrapper projects-show' id={'projects-contents-info'}>
+            {/* <div className='projects-contents-wrapper projects-show' id={'projects-contents-info'}>
               <div className='projects-arrow'>
                 <TbArrowBigRightLineFilled size='8rem'/>
               </div>
-            </div>
+            </div> */}
             {items_data.map(function(item, i){
               return (
               <div key={i} className='projects-contents-wrapper' id={'projects-contents-'+i}>

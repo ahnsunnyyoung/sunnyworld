@@ -26,7 +26,7 @@ export default function Header() {
 
     gsap.to("#navbar #logo", {
       x:'38%',
-      y:'-90px',
+      y:'-3rem',
       scrollTrigger: {
         trigger: "#belief",
         start: "0px 100%",
@@ -115,10 +115,10 @@ export default function Header() {
               <div id="logo-icon">
                 <MdSunny id="logo-icon-svg" color={theme.palette.darkpink} size='100%'/>
               </div>
-              <div id="logo-text">
+              {/* <div id="logo-text">
                 <p id="txt-sunny">SUNNY</p>
                 <p id="txt-world">world</p>
-              </div>
+              </div> */}
             </div>
           </div>
           {/* <div className="md:hidden">
