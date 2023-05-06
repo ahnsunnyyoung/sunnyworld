@@ -51,7 +51,7 @@ export default function ThirdSection() {
                     <td>
                       <div className="link-wrapper">
                         <div className="link">
-                          <a href="mailto:ahnsunnyyoung@gmail.com" target="_blank" rel="noreferrer">&#8599; ahnsunnyyoung</a>
+                          <a className="solid-font" href="mailto:ahnsunnyyoung@gmail.com" target="_blank" rel="noreferrer">&#8599; ahnsunnyyoung</a>
                         </div>
                         <div className="link-underline"></div>
                       </div>
@@ -73,9 +73,9 @@ export default function ThirdSection() {
                       <ul>
                       {items_data.map(function(item, i){
                         return (
-                          <li>
+                          <li key={i}>
                           <a href={item.contact_title} target="_blank" rel="noreferrer" className="link-wrapper">
-                            <div className="link">
+                            <div className="link solid-font">
                               {item.logo} {item.contact_title}
                             </div>
 

@@ -111,7 +111,7 @@ export default function SecondSection() {
             </div>
             {items_data.map(function(item, i){
               return (
-              <div className='projects-contents-wrapper' id={'projects-contents-'+i}>
+              <div key={i} className='projects-contents-wrapper' id={'projects-contents-'+i}>
                 <Grid container>
                   <Grid item xs={3}>
                     <div className='project-year'>{item.year}</div>
@@ -155,7 +155,7 @@ export default function SecondSection() {
             <ul className="projects-list">
             {items_data.map(function(item, i){
               return (
-                <li>
+                <li key={i}>
                   <div className="projects-row" onMouseOver={(e)=>{mouseover(i, e)}} onMouseLeave={(e)=>{mouseleave(i, e)}} >
                     <div className="projects-row-left">
                       <div className="projects-selected-wrapper">

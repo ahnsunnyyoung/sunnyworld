@@ -48,9 +48,9 @@ export default function MainSection() {
         </div>
 
         
-        <div className='mx-4'>
-          <p id='sub-text-title'>Frontend Developer,</p>
-          <p id='sub-text-detail'>who is sharing <span id='highlight'>happy</span>, <span id='highlight'>interactive</span> and <span id='highlight'>meaningful</span> experiences.</p>
+        <div className='mx-4' id='sub-text'>
+          <p className='solid-font' id='sub-text-title'>Frontend Developer,</p>
+          <p className='solid-font' id='sub-text-detail'>who is sharing <span className='solid-font'  id='highlight'>happy</span>, <span className='solid-font'  id='highlight'>interactive</span> and <span className='solid-font'  id='highlight'>meaningful</span> experiences.</p>
         </div>
 
       </div>

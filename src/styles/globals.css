@@ -8,6 +8,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --foreground-rgb: white;
@@ -28,15 +34,17 @@
   --border: 1.2px;
   --border-radius-content: 0;
 
-  --title-font-size: 1.7rem;
-  --subtitle-font-size: 1.1rem;
+  --title-font-size: 2.2rem;
+  --subtitle-font-size: 1.8rem;
   --contents-font-size: 1rem;
   --h1-font-size: 2rem;
   --h2-font-size: 1.7rem;
   --h3-font-size: 1.5rem;
-  --h4-font-size: 1.1rem;
+  --h4-font-size: 1.3rem;
   --h5-font-size: 1rem;
 
+  --round-font:  'KCC-Ganpan';
+  --solid-font: 'SUIT-Regular';
   
   --r-title-font-size: 2rem;
   --r-subtitle-font-size: 1.5rem;
@@ -68,10 +76,13 @@ body {
 }
 
 *{
-  font-family: 'KCC-Ganpan';
+  font-family: var(--round-font);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.solid-font {
+  font-family: var(--solid-font);
 }
 .main-container{
   width: 100%;
@@ -102,42 +113,10 @@ section{
 #home{
   background: linear-gradient(to bottom, var(--main-pink), var(--main-yellow));
   }
+
 #belief{  
   background: linear-gradient(to bottom, var(--main-yellow), var(--main-green));
 } 
-#belief .text-container .text-box {
-  color: var(--main-grey);
-  border-radius: 15px;
-  width: 25%;
-  margin: 10px;
-}
-#belief .text-container .text-box:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-}
-#belief .text-container .text-box .icon-box{
-  margin: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  border-radius: 50%;
-  aspect-ratio: 1;
-  background-color: var(--main-pink);
-  box-shadow: 5px 7px 5px 1px var(--main-darkpink);
-}
-#belief .text-container .text-box .text-title{
-  color: var(--main-grey);
-  text-align: center;
-  font-size: var(--title-font-size);
-  font-weight: 600;
-}
-#belief .text-container .text-box .text-description{
-  text-align: center;
-  font-size: var(--contents-font-size);
-  font-weight: 200;
-  font-style: italic;
-}
 #projects{
   background: linear-gradient(to bottom, var(--main-green), var(--main-purple));
 }
@@ -293,17 +272,56 @@ section .text-container .text-box h3{
   margin-top: -60px;
   width: 400px;
 }
+
 #sub-text-title {
   font-size: var(--title-font-size);
   font-weight: 800;
 }
 #sub-text-detail {
-  font-size: var(--subtitle-font-size);
+  font-size: var(--h4-font-size);
 }
 #sub-text-detail #highlight {
+  font-size: var(--h3-font-size);
   font-weight: 800;
   color: var(--main-darkpink);
 }
+
+/* Belief */
+#belief .text-container .text-box {
+  color: var(--main-grey);
+  border-radius: 15px;
+  width: 25%;
+  margin: 10px;
+}
+#belief .text-container .text-box:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+}
+#belief .text-container .text-box .icon-box{
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background-color: var(--main-pink);
+  box-shadow: 5px 7px 5px 1px var(--main-darkpink);
+}
+#belief .text-container .text-box .text-title{
+  font-family: var(--solid-font);
+  color: var(--main-grey);
+  text-align: center;
+  font-size: var(--h2-font-size);
+  font-weight: 600;
+}
+#belief .text-container .text-box .text-description{
+  font-family: var(--solid-font);
+  text-align: center;
+  font-size: var(--contents-font-size);
+  font-weight: 200;
+}
+
 
 /* Projects */
 .projects {
@@ -399,13 +417,18 @@ section .text-container .text-box h3{
 	transition: all 800ms cubic-bezier(.47,1.64,.41,.8);
 }
 .projects-right ul .projects-row-left .projects-title{
+  font-family: var(--solid-font);
+  font-weight: 800;
   font-size: var(--h3-font-size);
 }
 .projects-right ul .projects-row-right .projects-category{
+  font-family: var(--solid-font);
   font-size: var(--h5-font-size);
 }
 
 .projects-right ul .projects-row-left .projects-title-transform {
+  font-family: var(--solid-font);
+  font-weight: 800;
   font-size: var(--h3-font-size);
   transform: translateX(24px) translateZ(0px);
 	transition: all 800ms cubic-bezier(.47,1.64,.41,.8);
@@ -426,35 +449,42 @@ section .text-container .text-box h3{
   /* border: var(--main-grey) solid 1px; */
 }
 .project-year {
+  font-family: var(--solid-font);
   width: fit-content;
   font-size: var(--h2-font-size);
   border-bottom: #c5c5c5 solid 1px;
   color: #929292;
 }
 .project-dur {
+  font-family: var(--solid-font);
   font-size: var(--h1-font-size);
   font-weight: 500;
 }
 .project-category {
+  font-family: var(--solid-font);
   font-size: var(--h4-font-size);
   color: #f76540;
   font-weight: 600;
 }
 .project-title {
+  font-family: var(--solid-font);
   font-size: var(--title-font-size);
-  font-weight: 600;
+  font-weight: 800;
   margin: 20px 0px 20px;
 }
 .project-content {
+  font-family: var(--solid-font);
   font-size: var(--h5-font-size);
   color: var(--main-grey);
   margin-bottom: 1.2rem;
 }
 .project-type {
+  font-family: var(--solid-font);
   font-size: var(--h5-font-size);
   font-weight: 600;
 }
 .project-type-position {
+  font-family: var(--solid-font);
   font-size: var(--h5-font-size);
   font-weight: 100;
 }
@@ -481,8 +511,9 @@ table td h6 {
 
 h6 {
   text-transform: uppercase;
-  font-variation-settings: "wght" 800,"wdth" 125;
-  font-size: var(--title-font-size);
+  font-weight: 800;
+  font-size: var(--h1-font-size);
+  font-family: var(--solid-font);
 }
 
 table tr:last-child td {
@@ -539,12 +570,18 @@ table tr:last-child td {
     margin-top: -20px;
     width: 200px;
   }
+  #sub-text {
+    padding: 0px 1rem;
+  }
   #sub-text-title {
     font-size: var(--r-subtitle-font-size);
     font-weight: 800;
   }
   #sub-text-detail {
-    font-size: var(--r-contents-font-size);
+    font-size: var(--r-h4-font-size);
+  }
+  #sub-text-detail #highlight {
+    font-size: var(--r-h3-font-size);
   }
   
   #belief .text-container .text-box {
@@ -553,7 +590,7 @@ table tr:last-child td {
     padding: 10px;
   }
   #belief .text-container .text-box .icon-box{
-    margin: 0.2rem auto;
+    margin: 0px auto 1rem;
     width: 30%;
     box-shadow: 3px 5px 5px 1px var(--main-darkpink);
   }
@@ -562,6 +599,8 @@ table tr:last-child td {
   }
   #belief .text-container .text-box .text-description{
     font-size: var(--r-h5-font-size);
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
   .page-head .page-title{
@@ -616,6 +655,9 @@ table tr:last-child td {
   }
   table tr:last-child td {
     padding: 0;
-}
+  }
+  h6 {
+    font-size: var(--r-h1-font-size);
+  }
   
 }

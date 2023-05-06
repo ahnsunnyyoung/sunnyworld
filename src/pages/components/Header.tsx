@@ -20,7 +20,7 @@ export default function Header() {
       scrollTrigger: {
         trigger: "#contact",
         start: "0px 50%",
-        toggleActions: 'play'
+        toggleActions: 'restart'
       },
     });
 
