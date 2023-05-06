@@ -14,7 +14,7 @@ export default function Header() {
       duration:3,
     });
 
-    gsap.to("#contact #logo-icon-svg", {
+    gsap.to("#contact-logo-icon-svg", {
       rotate:'360',
       duration:3,
       scrollTrigger: {
@@ -26,7 +26,7 @@ export default function Header() {
 
     gsap.to("#navbar #logo", {
       x:'38%',
-      y:'-50%',
+      y:'-90px',
       scrollTrigger: {
         trigger: "#belief",
         start: "0px 100%",
@@ -38,7 +38,7 @@ export default function Header() {
 
     gsap.to("#navbar #logo", {
       x:'80%',
-      y:'0%',
+      y:'0px',
       immediateRender: false,
       scrollTrigger: {
         trigger: "#projects",

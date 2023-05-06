@@ -34,73 +34,76 @@ export default function ThirdSection() {
   return (
     <section id='contact'>
         <div className="slide reveal">
-          <div>
-            <div className='page-head'>
-              <h2 className='page-title'>Contact</h2>
-            </div>
-          </div>
-          <div className='contact-content'>
-
-            <div className="contact-left">
-              <table>
-                <tbody>
-                  <tr>
-                    <td>
-                      <h6>Mail</h6>
-                    </td>
-                    <td>
-                      <div className="link-wrapper">
-                        <div className="link">
-                          <a className="solid-font" href="mailto:ahnsunnyyoung@gmail.com" target="_blank" rel="noreferrer">&#8599; ahnsunnyyoung</a>
-                        </div>
-                        <div className="link-underline"></div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div className="contact-right">
-              <table>
-                <tbody>
-                  <tr>
-                    <td>
-                      <h6>Social medias</h6>
-                    </td>
-
-                    <td>
-                      <ul>
-                      {items_data.map(function(item, i){
-                        return (
-                          <li key={i}>
-                          <a href={item.contact_title} target="_blank" rel="noreferrer" className="link-wrapper">
-                            <div className="link solid-font">
-                              {item.logo} {item.contact_title}
-                            </div>
-
-                            <div className="link-underline"></div>
-                          </a>
-                        </li>)
-                      })}
-                      </ul>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            
-          </div>
-          <div  id="logo-container">
-            <div id="logo" className='flex align-content-center'>
-              <div id="logo-icon">
-                <MdSunny id="logo-icon-svg" color={theme.palette.darkpink} size='100%'/>
+          
+        <div  id="contact-logo-container">
+            <div id="contact-logo">
+              <div id="contact-logo-icon">
+                <MdSunny id="contact-logo-icon-svg" color={theme.palette.darkpink} size='100%'/>
               </div>
-              <div id="logo-text">
+              <div id="contact-logo-text">
                 <p id="txt-sunny">SUNNY</p>
                 <p id="txt-world">world</p>
               </div>
             </div>
+          </div>
+
+
+          <div className='contact-container'>
+            <div className='page-head'>
+              <h2 className='page-title'>Contact</h2>
+            </div>
+            <div className='contact-content'>
+
+              <div className="contact-left">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <h6>Mail</h6>
+                      </td>
+                      <td>
+                        <div className="link-wrapper">
+                          <div className="link">
+                            <a className="solid-font" href="mailto:ahnsunnyyoung@gmail.com" target="_blank" rel="noreferrer">&#8599; ahnsunnyyoung</a>
+                          </div>
+                          <div className="link-underline"></div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="contact-right">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <h6>Social medias</h6>
+                      </td>
+
+                      <td>
+                        <ul>
+                        {items_data.map(function(item, i){
+                          return (
+                            <li key={i}>
+                            <a href={item.contact_title} target="_blank" rel="noreferrer" className="link-wrapper">
+                              <div className="link solid-font">
+                                {item.logo} {item.contact_title}
+                              </div>
+
+                              <div className="link-underline"></div>
+                            </a>
+                          </li>)
+                        })}
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
           </div>
         </div>
 
