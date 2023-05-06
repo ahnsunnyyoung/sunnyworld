@@ -3,19 +3,40 @@
 @tailwind utilities;
 @import "react-alice-carousel/lib/alice-carousel.css";
 @font-face {
-  font-family: 'KCC-Ganpan';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+  font-family: 'NEXON Lv2 Gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'SUIT-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-family: 'MaplestoryOTFBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bazzi';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 :root {
+  --tea-rose-red: #F1C0C0ff;
+  --isabelline: #F1EAEAff;
+  --ghost-white: #EAEAF1ff;
+  --cream: #F1F1C0ff;
+  --light-orange: #F4DBBCff;
+  --tea-green: #C3F5BAff;
+  --celeste: #C0F1F1ff;
+  --turquoise: #83EED8ff;
+  --tiffany-blue: #8DE8E4ff;
+  --periwinkle: #C0C0F1ff;
+  --periwinkle-2: #C9C8EBff;
+  --thistle: #C3BAD0ff;
+  --cool-gray: #333643ff;
+
+
   --foreground-rgb: white;
   --main-pink: #F48B9B;
   --main-darkpink: #F27084;
@@ -34,7 +55,8 @@
   --border: 1.2px;
   --border-radius-content: 0;
 
-  --title-font-size: 2.2rem;
+  --casual-header-font-size: 45px;
+  --title-font-size: 2rem;
   --subtitle-font-size: 1.8rem;
   --contents-font-size: 1rem;
   --h1-font-size: 2rem;
@@ -43,10 +65,14 @@
   --h4-font-size: 1.3rem;
   --h5-font-size: 1rem;
 
-  --round-font:  'KCC-Ganpan';
-  --solid-font: 'SUIT-Regular';
+  --font-weight-bold: 700;
+
+  --round-font:  'Bazzi';
+  --solid-font: 'NEXON Lv2 Gothic';
+  --logo-font: 'MaplestoryOTFBold';
   
-  --r-title-font-size: 2rem;
+  --r-casual-header-font-size: 1.8rem;
+  --r-title-font-size: 1.5rem;
   --r-subtitle-font-size: 1.5rem;
   --r-contents-font-size: 1rem;
   --r-h1-font-size: 1.1rem;
@@ -62,8 +88,9 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: var(--main-pink);
-  color: var(--foreground-rgb);
+  background: linear-gradient(135deg, var(--ghost-white) 0%, var(--tea-rose-red) 33%, var(--cream) 67%, var(--tea-green) 100%);
+  background-attachment: fixed; /*edit*/
+  color: var(--cool-gray);
   -ms-overflow-style: none;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
@@ -81,6 +108,16 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.casual-header {
+  font-family: var(--round-font);
+  font-size: var(--casual-header-font-size);
+  font-weight: var(--font-weight-bold);
+}
+#belief .casual-header {
+  margin-left: 15%;
+}
+
 .solid-font {
   font-family: var(--solid-font);
 }
@@ -110,29 +147,6 @@ section{
 .navigator-dots .dots:hover {
   color: var(--main-darkpink);
 }
-#home{
-  background: linear-gradient(to bottom, var(--main-pink), var(--main-yellow));
-  }
-
-#belief{  
-  background: linear-gradient(to bottom, var(--main-yellow), var(--main-green));
-} 
-#projects{
-  background: linear-gradient(to bottom, var(--main-green), var(--main-purple));
-}
-#carousel-container {
-  width: 70%;
-}
-#contact{
-  background: linear-gradient(to bottom, var(--main-purple), var(--main-pink));
-}
-#contact .icon-box{
-  padding-top: 2%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-}
 /* section .slide{
   margin: 100px;
 } */
@@ -140,7 +154,7 @@ section h1{
   margin: 20px;
 }
 section h2{
-  font-size: 40px;
+  font-size: var(--title-font-size);
   text-align: center;
   text-transform: uppercase;
 }
@@ -200,57 +214,78 @@ section .text-container .text-box h3{
   margin-top: 4rem;
   margin-left: 1%;
 }
-
-#contact #logo-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0px;
-  margin-top: 8rem;
-  margin-left: 0px;
-}
-
-#contact #logo {
-  position: fixed;
-  transform: scale(2);
-}
-
-#contact #logo-text {
-  cursor: auto;
-  position: fixed;
-  margin-left: 0px;
-  width: 100%;
-  height: 100%;
-  margin-top: 17px;
-  text-align: center;
-}
-
 #logo-icon {
+  position: fixed;
   z-index: -1;
   width: 10rem;
+  height: 10rem;
 }
-
 #logo-text {
+  width: 10rem;
+  height: 10rem;
+  text-align: center;
+  position: fixed;
   cursor: pointer;
-  color: white;
-  font-weight: 800;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: -95px;
+  margin-top: 2rem;
+  text-shadow: 1px 1px var(--tea-rose-red);
+  color: var(--ghost-white);
+  font-weight: 100;
 }
-
 #logo-text #txt-sunny {
+  font-family: var(--logo-font);
+  font-size: 40px;
+}
+#logo-text #txt-world {
+  font-family: var(--logo-font);
   font-size: 45px;
+  margin-top: -30px;
 }
 
-#logo-text #txt-world {
-  font-size: 45px;
-  margin-top: -35px;
+#contact-logo-container {
+  opacity: 0.5;
+  width: 100%;
+  top: 50%;
+  position: absolute;
+  z-index: -1;
+}
+#contact-logo {
+  display: flex;
+  justify-content: center;
+  margin: -10rem; /* height offset */
+}
+#contact-logo-icon {
+  position: fixed;
+  width: 20rem;
+  height: 20rem;
+}
+#contact-logo-text {
+  width: 20rem;
+  height: 20rem;
+  text-align: center;
+  position: fixed;
+  cursor: pointer;
+  margin-top: 4rem;
+  text-shadow: 1px 1px var(--tea-rose-red);
+  color: var(--ghost-white);
+  font-weight: 100;
+}
+#contact-logo-text #txt-sunny {
+  font-family: var(--logo-font);
+  font-size: 80px;
+}
+#contact-logo-text #txt-world {
+  font-family: var(--logo-font);
+  font-size: 90px;
+  margin-top: -60px;
+}
+.contact-container {
+  height: 100vh;
+  padding-top: 12%;
 }
 
 #main-text-container {
-  font-weight: 800;
-  font-size: 45px;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--casual-header-font-size);
   z-index: 999;
 }
 
@@ -276,20 +311,19 @@ section .text-container .text-box h3{
 
 #sub-text-title {
   font-size: var(--title-font-size);
-  font-weight: 800;
+  font-weight: var(--font-weight-bold);
 }
 #sub-text-detail {
   font-size: var(--h4-font-size);
 }
 #sub-text-detail #highlight {
   font-size: var(--h3-font-size);
-  font-weight: 800;
+  font-weight: var(--font-weight-bold);
   color: var(--main-darkpink);
 }
 
 /* Belief */
 #belief .text-container .text-box {
-  color: var(--main-grey);
   border-radius: 15px;
   width: 25%;
   margin: 10px;
@@ -311,7 +345,6 @@ section .text-container .text-box h3{
 }
 #belief .text-container .text-box .text-title{
   font-family: var(--solid-font);
-  color: var(--main-grey);
   text-align: center;
   font-size: var(--h2-font-size);
   font-weight: 600;
@@ -346,8 +379,8 @@ section .text-container .text-box h3{
 }
 @keyframes bounce2 {
 	0%, 20%, 50%, 80%, 100% {transform: translateX(0);}
-	40% {transform: translateX(20%);}
-	60% {transform: translateX(10%);}
+	40% {transform: translateX(-20%);}
+	60% {transform: translateX(-10%);}
 }
 .projects-right {
   width: 50%;
@@ -373,6 +406,7 @@ section .text-container .text-box h3{
   border-bottom: var(--border) solid var(--main-light-grey);
 }
 .page-head .page-title {
+  font-family: var(--logo-font);
   width: 100%;
   text-align: left;
   margin: 0;
@@ -419,8 +453,8 @@ section .text-container .text-box h3{
 }
 .projects-right ul .projects-row-left .projects-title{
   font-family: var(--solid-font);
-  font-weight: 800;
-  font-size: var(--h3-font-size);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--h4-font-size);
 }
 .projects-right ul .projects-row-right .projects-category{
   font-family: var(--solid-font);
@@ -429,8 +463,8 @@ section .text-container .text-box h3{
 
 .projects-right ul .projects-row-left .projects-title-transform {
   font-family: var(--solid-font);
-  font-weight: 800;
-  font-size: var(--h3-font-size);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--h4-font-size);
   transform: translateX(24px) translateZ(0px);
 	transition: all 800ms cubic-bezier(.47,1.64,.41,.8);
 }
@@ -470,7 +504,7 @@ section .text-container .text-box h3{
 .project-title {
   font-family: var(--solid-font);
   font-size: var(--title-font-size);
-  font-weight: 800;
+  font-weight: var(--font-weight-bold);
   margin: 20px 0px 20px;
 }
 .project-content {
@@ -510,10 +544,13 @@ table td h6 {
   overflow-x: clip;
 }
 
+.link {
+  font-size: var(--h4-font-size);
+}
 h6 {
   text-transform: uppercase;
-  font-weight: 800;
-  font-size: var(--h1-font-size);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--h3-font-size);
   font-family: var(--solid-font);
 }
 
@@ -529,26 +566,61 @@ table tr:last-child td {
     font-size: var(--r-title-font-size);
     text-align: center;
   }
+  section h2{
+    font-size: var(--r-title-font-size);
+    text-align: center;
+  }
   section .text-container{
     flex-direction: column;
   }
+  
+  .casual-header {
+    font-size: var(--r-casual-header-font-size);
+  }
+
   #logo-container {
-    padding-left: 0;
-    margin-top: 3rem;
+    padding-left: 0px;
+    margin-top: 4rem;
+    margin-left: 1%;
   }
   #logo-icon {
     width: 5rem;
+    height: 5rem;
   }
   #logo-text {
-    margin-left: -45px;
+    margin-top: 1rem;
+    width: 5rem;
+    height: 5rem;
   }
   #logo-text #txt-sunny {
     font-size: 20px;
   }
-  
   #logo-text #txt-world {
-    font-size: 20px;
+    font-size: 22px;
     margin-top: -15px;
+  }
+
+  #contact-logo {
+    margin: -5rem; /* height offset */
+  }
+  #contact-logo-icon {
+    position: fixed;
+    width: 10rem;
+    height: 10rem;
+  }
+  #contact-logo-text {
+    width: 10rem;
+    height: 10rem;
+    margin-top: 2rem;
+  }
+  #contact-logo-text #txt-sunny {
+    font-family: var(--logo-font);
+    font-size: 40px;
+  }
+  #contact-logo-text #txt-world {
+    font-family: var(--logo-font);
+    font-size: 45px;
+    margin-top: -30px;
   }
   
   #main-text-container {
@@ -576,7 +648,7 @@ table tr:last-child td {
   }
   #sub-text-title {
     font-size: var(--r-subtitle-font-size);
-    font-weight: 800;
+    font-weight: var(--font-weight-bold);
   }
   #sub-text-detail {
     font-size: var(--r-h4-font-size);
@@ -611,7 +683,10 @@ table tr:last-child td {
     padding: 1rem 0;
   }
   .projects-right ul .projects-row-left .projects-title{
-    font-size: var(--r-h3-font-size);
+    font-size: var(--r-h4-font-size);
+  }
+  .projects-right ul .projects-row-left .projects-title-transform {
+    font-size: var(--r-h4-font-size);
   }
   .projects-right ul .projects-row-right .projects-category{
     font-size: var(--r-h5-font-size);
@@ -657,8 +732,11 @@ table tr:last-child td {
   table tr:last-child td {
     padding: 0;
   }
+  .link {
+    font-size: var(--r-h4-font-size);
+  }
   h6 {
-    font-size: var(--r-h1-font-size);
+    font-size: var(--r-h3-font-size);
   }
   
 }
