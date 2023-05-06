@@ -9,12 +9,22 @@ export default function Header() {
   const [navbar, setNavbar] = useState(false);
 
   useEffect(() => {
-    gsap.to("#logo-icon-svg", {
+    gsap.to("#navbar #logo-icon-svg", {
       rotate:'360',
       duration:3,
     });
 
-    gsap.to("#logo", {
+    gsap.to("#contact #logo-icon-svg", {
+      rotate:'360',
+      duration:3,
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "0px 50%",
+        toggleActions: 'play'
+      },
+    });
+
+    gsap.to("#navbar #logo", {
       x:'38%',
       y:'-50%',
       scrollTrigger: {
@@ -26,7 +36,7 @@ export default function Header() {
       },
     });
 
-    gsap.to("#logo", {
+    gsap.to("#navbar #logo", {
       x:'80%',
       y:'0%',
       immediateRender: false,
@@ -39,7 +49,7 @@ export default function Header() {
       }
     });
 
-    gsap.to("#logo-icon-svg", {
+    gsap.to("#navbar #logo-icon-svg", {
       rotate:'360',
       scrollTrigger: {
         trigger: "#belief",
@@ -50,7 +60,7 @@ export default function Header() {
       },
     });
 
-    gsap.to("#logo-icon-svg", {
+    gsap.to("#navbar #logo-icon-svg", {
       rotate:'360',
       scrollTrigger: {
         trigger: "#projects",
@@ -61,7 +71,7 @@ export default function Header() {
       }
     });
 
-    gsap.to("#logo", {
+    gsap.to("#navbar #logo", {
       opacity: 0,
       immediateRender: false,
       scrollTrigger: {

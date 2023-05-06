@@ -5,7 +5,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import { FaUserAlt, FaUserFriends } from 'react-icons/fa';
-import { useEffect, useState } from 'react'
+import { TbArrowBigRightLineFilled } from 'react-icons/tb';
 
 const handleDragStart = (e: { preventDefault: () => any; }) => e.preventDefault();
 
@@ -62,9 +62,13 @@ const items_data = [
 export default function SecondSection() {
   
   function mouseover (params:any, e:any) {
+    const contentsInfo = document.getElementById(`projects-contents-info`);
     const contents = document.getElementById(`projects-contents-${params}`);
     const arrow = document.getElementById(`projects-selected-${params}`);
     const title = document.getElementById(`projects-title-${params}`);
+    if(contentsInfo){
+      contentsInfo.classList.remove("projects-show");
+    }
     if(contents){
       contents.classList.add("projects-show");
     }
@@ -77,9 +81,13 @@ export default function SecondSection() {
   }
   
   function mouseleave (params:any, e:any) {
+    const contentsInfo = document.getElementById(`projects-contents-info`);
     const contents = document.getElementById(`projects-contents-${params}`);
     const arrow = document.getElementById(`projects-selected-${params}`);
     const title = document.getElementById(`projects-title-${params}`);
+    if(contentsInfo){
+      contentsInfo.classList.add("projects-show");
+    }
     if(contents){
       contents.classList.remove("projects-show");
     }
@@ -96,6 +104,11 @@ export default function SecondSection() {
         <div className="slide reveal projects">
         {/* <AliceCarousel mouseTracking items={items} responsive={responsive} disableButtonsControls={true}/> */}
           <div className='projects-left'>
+            <div className='projects-contents-wrapper projects-show' id={'projects-contents-info'}>
+              <div className='projects-arrow'>
+                <TbArrowBigRightLineFilled size='8rem'/>
+              </div>
+            </div>
             {items_data.map(function(item, i){
               return (
               <div className='projects-contents-wrapper' id={'projects-contents-'+i}>
