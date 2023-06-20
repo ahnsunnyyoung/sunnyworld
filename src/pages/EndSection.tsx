@@ -54,8 +54,8 @@ export default function EndSection() {
       <span id='mainPosition'>Frontend Developer</span>
       <span id='mainTitle'>Do you want some Sunshine?</span>
       <div id='contacts'>
-        {data.map((item) =>
-          <a className="contactDiv" href={item.url}>
+        {data.map((item, index) =>
+          <a className="contactDiv" href={item.url} key={index}>
             <div className="icon">{item.icon}</div>
             <div className="title">{item.title}</div>
           </a>

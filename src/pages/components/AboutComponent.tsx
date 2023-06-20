@@ -14,8 +14,8 @@ export default function AboutComponent() {
 
       <div className='body'>
         <span>
-          Hello, I'm Sunyoung Ahn &#40;aka. Sunny&#41;, a 23-year-old Frontend Developer.<br/>
-          I hold a bachelor's degree in Software Engineering and I am currently pursuing my master's degree in Computer Science.
+          Hello, I&#39;m Sunyoung Ahn &#40;aka. Sunny&#41;, a 23-year-old Frontend Developer.<br/>
+          I hold a bachelor&#39;s degree in Software Engineering and I am currently pursuing my master&#39;s degree in Computer Science.
         </span>
       </div>
 

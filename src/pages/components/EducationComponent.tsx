@@ -40,8 +40,8 @@ export default function EducationComponent() {
       </div>
 
       <div id="cardViewDiv">
-        {data.map((item) =>
-          <div className="cardView">
+        {data.map((item, index) =>
+          <div className="cardView" key={index}>
             <div className="cardHeader">
               <img className="cardIcon" src={item.img} alt={item.img_alt}/>
               <div className="cardTitleDiv">

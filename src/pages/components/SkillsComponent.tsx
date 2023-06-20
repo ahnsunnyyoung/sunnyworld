@@ -8,7 +8,7 @@ export default function SkillsComponent() {
           Skills
         </div>
         <div className='subtitle'>
-          Languages, Tools, Engines, Libraries & Systems I'm used to
+          Languages, Tools, Engines, Libraries & Systems I&#39;m used to
         </div>
       </div>
 

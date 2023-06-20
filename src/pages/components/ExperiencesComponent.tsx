@@ -65,8 +65,8 @@ export default function ExperiencesComponent() {
       </div>
 
       <div id="cardViewDiv">
-        {data.map((item) =>
-          <div className="cardView" style={{"width":item.width}}>
+        {data.map((item, index) =>
+          <div className="cardView" key={index} style={{"width":item.width}}>
             <div className="cardHeader">
               <img className="cardIcon" src={item.img} alt={item.img_alt}/>
               <div className="cardTitleDiv">
@@ -77,8 +77,8 @@ export default function ExperiencesComponent() {
             <span className="period">{item.period}</span>
             <div className="contents">
               <ul>
-                {item.contents.map((content) =>
-                  <li>{content}</li>
+                {item.contents.map((content, i) =>
+                  <li key={i}>{content}</li>
                 )}
               </ul>
             </div>
