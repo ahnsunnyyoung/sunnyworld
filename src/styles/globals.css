@@ -533,6 +533,7 @@ b {
   border-radius: 30px;  
   align-self: stretch;
   font-weight: 100;
+  min-width: 350px;
 }
 
 #experiencesComponent #cardViewDiv .cardView .cardHeader {
@@ -648,6 +649,7 @@ b {
   border-radius: 30px;  
   align-self: stretch;
   font-weight: 100;
+  min-width: 350px;
 }
 
 #projectsComponent #cardViewDiv .cardView .cardHeader {
