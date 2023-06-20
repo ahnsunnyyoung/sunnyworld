@@ -1,38 +1,29 @@
 import React, { useEffect, } from "react";
 import Head from 'next/head'
-import Header from './components/Header';
-import MainSection from './components/MainSection';
-import FirstSection from './components/FirstSection';
-import SecondSection from './components/SecondSection';
-import ThirdSection from './components/ThirdSection';
-import { IoMdFlower } from 'react-icons/io';
-
-const scrollTo = (id: string, e: { preventDefault: () => void; }) => {
-  const section = document.querySelector( id );
-  if (section){
-    section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
-  }
-}
+import MainSection from './MainSection';
+import ContentsSection from './ContentsSection';
+import EndSection from './EndSection';
 
 export default function Home() {
-  const options = {
-    root: null, // viewport
-    rootMargin: "0px",
-    threshold: 0.4,  // 50%가 viewport에 들어와 있어야 callback 실행
-  }
 
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        } else {
-          entry.target.classList.remove('active');
-        }
-      });
-    }, options);
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  
+    const cursor = document.querySelector('.cursor');
+  
+    document.addEventListener('mousemove', e => {
+      if(cursor)
+        cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+    })
+  
+    document.addEventListener('click', () => {
+      if(cursor)
+        cursor.classList.add("expand");
+  
+        setTimeout(() => {
+          if(cursor)
+            cursor.classList.remove("expand");
+        }, 500)
+    })
   }, []);
 
   return (
@@ -43,27 +34,13 @@ export default function Home() {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
         <link rel="manifest" href="/site.webmanifest"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css?family=Open Sans Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"></link>
       </Head>
-      <Header/>
+      {/* <div className="cursor"></div> */}
       <MainSection/>
-      <FirstSection/>
-      <SecondSection/>
-      <ThirdSection/>
-      <div className="navigator-dots">
-        <div className="dots" onClick={(e)=>{scrollTo('#home', e)}}>
-          <IoMdFlower/>
-        </div>
-        <div className="dots" onClick={(e)=>{scrollTo('#belief', e)}}>
-          <IoMdFlower/>
-        </div>
-        <div className="dots" onClick={(e)=>{scrollTo('#projects', e)}}>
-          <IoMdFlower/>
-        </div>
-        <div className="dots" onClick={(e)=>{scrollTo('#contact', e)}}>
-          <IoMdFlower/>
-        </div>
-
-      </div>
+      <ContentsSection/>
+      <EndSection/>
     </div>
   )
 }
