@@ -5,8 +5,8 @@ export default function MainSection() {
     <section id='mainSection'>
 
       {/* absolute background */}
-      <div id='shadowSunny'>
-        Sunny
+      <div id='shadowSunnyDiv'>
+        <span id='shadowSunny'>Sunny</span>
       </div>
       <div id='lastupdateInfoDiv'>
         <span id='lastupdateInfo'>Latest update 6/20/2023</span>
