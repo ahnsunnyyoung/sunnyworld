@@ -20,19 +20,25 @@ body {
 }
 
 :root {
-  --fs-shadowTitle: 10rem;
-  --fs-lastupdate: 1.2rem;
+  --fs-shadowTitle: 12rem;
+  --fs-shadowTitle-mb: 8rem;
+  --fs-lastupdate: 1.1rem;
   --fs-mainPosition: 2.25rem;
-  --fs-mainTitle: 6rem;
+  --fs-mainTitle: 7rem;
+  --fs-mainTitle-mb: 5rem;
   --fs-endTitle: 5rem;
+  --fs-endTitle-mb: 4rem;
   --fs-mainVision: 2rem;
 
   --fs-sectionTitle: 2rem;
   --fs-sectionSubtitle: 1.75rem;
 
-  --fs-cardTitle: 1.25rem;
+  --fs-aboutBody: 1.1rem;
+  --fs-visionTitle: 1.5rem;
+
+  --fs-cardTitle: 1.3rem;
   --fs-cardSubtitle: 1rem;
-  --fs-cardBody: 0.9rem;
+  --fs-cardBody: 1rem;
 
   --fs-contactTitle: 1.25rem;
 
@@ -54,8 +60,11 @@ body {
   --diameter-vision-icon: 11.25rem;
   --diameter-vision-icon-mb: 8rem;
 
+  --gap-sections: 20rem;
+  --gap-contents: 3rem;
   --gap-card-view: 1rem;
   --gap-contacts: 2.5rem;
+  --gap-contacts-mb: 1rem;
   
 }
 
@@ -227,7 +236,7 @@ b {
   flex-grow: 0;
 }
 
-#mainSection #fs-mainPosition {
+#mainSection #mainPosition {
   /* Frontend Developer */
   font-weight: 300;
   font-size: var(--fs-mainPosition);
@@ -282,7 +291,7 @@ b {
   flex-direction: column;
   justify-content: center;
   padding: 15%;
-  gap: 300px;
+  gap: var(--gap-sections);
 }
 
 .componentTitle {
@@ -337,7 +346,7 @@ b {
   justify-content: center;
   align-items: center;
   padding: 10px 0px;
-  gap: 40px;
+  gap: var(--gap-contents);
 
   /* Inside auto layout */
   flex: none;
@@ -347,6 +356,7 @@ b {
 }
 
 #aboutComponent .body {
+  font-size: var(--fs-aboutBody);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -426,7 +436,7 @@ b {
 
 #visionDiv .visionIconDiv .title {
   font-weight: 600;
-  font-size: var(--fs-sectionSubtitle);
+  font-size: var(--fs-visionTitle);
 
   /* identical to box height */
   display: flex;
@@ -442,7 +452,7 @@ b {
   justify-content: center;
   align-items: center;
   padding: 0px;
-  gap: 40px;
+  gap: var(--gap-contents);
 }
 
 #skillsComponent #skillsWordCloud {
@@ -457,17 +467,18 @@ b {
   justify-content: center;
   align-items: center;
   padding: 0px;
-  gap: 40px;
+  gap: var(--gap-contents);
 }
 
 #educationComponent #cardViewDiv {
+  width: 100%;
+  justify-content: space-around;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   padding: 0px;
-  gap: 40px;
+  gap: var(--gap-contents);
 }
 
 #educationComponent #cardViewDiv .cardView {
@@ -555,17 +566,18 @@ b {
   justify-content: center;
   align-items: center;
   padding: 0px;
-  gap: 40px;
+  gap: var(--gap-contents);
 }
 
 #experiencesComponent #cardViewDiv {
+  width: 100%;
+  justify-content: space-around;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   padding: 0px;
-  gap: 40px;
+  gap: var(--gap-contents);
 }
 
 #experiencesComponent #cardViewDiv .cardView {
@@ -671,17 +683,18 @@ b {
   justify-content: center;
   align-items: center;
   padding: 0px;
-  gap: 40px;
+  gap: var(--gap-contents);
 }
 
 #projectsComponent #cardViewDiv {
+  width: 100%;
+  justify-content: space-around;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   padding: 0px;
-  gap: 40px;
+  gap: var(--gap-contents);
 }
 
 #projectsComponent #cardViewDiv .cardView {
@@ -863,7 +876,7 @@ b {
 }
 
 
-#endSection #fs-mainPosition {
+#endSection #mainPosition {
   /* Frontend Developer */
   font-weight: 300;
   font-size: var(--fs-mainPosition);
@@ -958,7 +971,19 @@ b {
 @media only screen and (max-width: 480px) {
 
   html {
-    font-size: 10px;
+    font-size: 13px;
+  }
+
+  #mainSection #shadowSunnyDiv #shadowSunny {
+    font-size: var(--fs-shadowTitle-mb);
+  }
+
+  #mainSection #mainTitle {
+    font-size: var(--fs-mainTitle-mb);
+  }
+
+  #contentsSection {
+    padding: 5%;
   }
 
   #visionDiv .visionIconDiv #embraceIcon {
@@ -976,4 +1001,15 @@ b {
     height: var(--diameter-vision-icon-mb);
   }
 
+  #endSection #shadowSunnyDiv #shadowSunny {
+    font-size: var(--fs-shadowTitle-mb);
+  }
+
+  #endSection #mainTitle {
+    font-size: var(--fs-endTitle-mb);
+  }
+
+  #endSection #contacts {
+    gap: var(--gap-contacts-mb);
+  }
 }

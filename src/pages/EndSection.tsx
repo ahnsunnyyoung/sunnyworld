@@ -51,7 +51,7 @@ export default function EndSection() {
         <span id='scrollUp' onClick={scrollTop}><BsFillArrowUpCircleFill size={'3rem'}/></span>
       </div>
 
-      <span id='fs-mainPosition'>Frontend Developer</span>
+      <span id='mainPosition'>Frontend Developer</span>
       <span id='mainTitle'>Do you want some Sunshine?</span>
       <div id='contacts'>
         {data.map((item, index) =>
