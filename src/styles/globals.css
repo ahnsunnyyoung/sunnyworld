@@ -4,10 +4,10 @@
 
 html {
   scroll-behavior: smooth;
+  /* font-size: 16px; */
 }
 body {
   /* cursor: none; */
-  width: fit-content;
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   color: #333643;
@@ -17,6 +17,46 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none; 
+}
+
+:root {
+  --fs-shadowTitle: 10rem;
+  --fs-lastupdate: 1.2rem;
+  --fs-mainPosition: 2.25rem;
+  --fs-mainTitle: 6rem;
+  --fs-endTitle: 5rem;
+  --fs-mainVision: 2rem;
+
+  --fs-sectionTitle: 2rem;
+  --fs-sectionSubtitle: 1.75rem;
+
+  --fs-cardTitle: 1.25rem;
+  --fs-cardSubtitle: 1rem;
+  --fs-cardBody: 0.9rem;
+
+  --fs-contactTitle: 1.25rem;
+
+  --line-height-mainTitle: 6rem;
+  --line-height-endTitle: 5rem;
+  --line-height-cardTitle: 1.6rem;
+  --line-height-cardSubtitle: 1.35rem;
+  --line-height-cardBody: 1.25rem;
+
+  --radius-border-icon: 1.25rem;
+  --radius-card-view: 1.8rem;
+
+  --padding-icon-ver: 0.5rem;
+  --padding-icon-hor: 0.7rem;
+  --padding-card-view-ver: 1.8rem;
+  --padding-card-view-hor: 1.8rem;
+  --padding-contacts: 0.7rem;
+
+  --diameter-vision-icon: 11.25rem;
+  --diameter-vision-icon-mb: 8rem;
+
+  --gap-card-view: 1rem;
+  --gap-contacts: 2.5rem;
+  
 }
 
 /* remove scroll bar */
@@ -98,6 +138,11 @@ b {
   font-weight: 700;
 }
 
+.main-container{
+  width: 100%;
+  height: 100vh;
+}
+
 /* MainSection */
 #mainSection {
   display: flex;
@@ -106,8 +151,7 @@ b {
   align-items: center;
   padding: 25px 40px;
   gap: 16px;
-  height: 100vh;
-
+  min-height: 100vh;
 }
 
 #mainSection #shadowSunnyDiv {
@@ -121,7 +165,7 @@ b {
   transform: translate(-50%, -50%);
 
   font-weight: 900;
-  font-size: 200px;
+  font-size: var(--fs-shadowTitle);
   text-align: center;
 
   color: #333643;
@@ -169,7 +213,7 @@ b {
   /* Latest update */
 
   font-weight: 300;
-  font-size: 18px;
+  font-size: var(--fs-lastupdate);
   display: flex;
   align-items: center;
   text-align: center;
@@ -183,10 +227,10 @@ b {
   flex-grow: 0;
 }
 
-#mainSection #mainPosition {
+#mainSection #fs-mainPosition {
   /* Frontend Developer */
   font-weight: 300;
-  font-size: 36px;
+  font-size: var(--fs-mainPosition);
 
   /* identical to box height */
   text-align: center;
@@ -200,11 +244,13 @@ b {
 
 #mainSection #mainTitle {
   font-weight: 800;
-  font-size: 96px;
+  font-size: var(--fs-mainTitle);
 
   /* identical to box height */
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  line-height: var(--line-height-mainTitle);
 
   /* Inside auto layout */
   flex: none;
@@ -217,7 +263,7 @@ b {
   /* “Shine brightly like the sunshine” */
   font-style: italic;
   font-weight: 300;
-  font-size: 32px;
+  font-size: var(--fs-mainVision);
 
   /* identical to box height */
   text-align: center;
@@ -255,7 +301,7 @@ b {
 
 .componentTitle .title {
   font-weight: 600;
-  font-size: 32px;
+  font-size: var(--fs-sectionTitle);
 
   /* Inside auto layout */
   flex: none;
@@ -267,7 +313,7 @@ b {
 .componentTitle .subtitle {
   font-family: 'Open Sans Condensed';
   font-weight: 300;
-  font-size: 28px;
+  font-size: var(--fs-sectionSubtitle);
   font-style: italic;
   
   /* Inside auto layout */
@@ -337,8 +383,8 @@ b {
   padding: 0px 15px;
   gap: 5px;
 
-  width: 180px;
-  height: 180px;
+  width: var(--diameter-vision-icon);
+  height: var(--diameter-vision-icon);
 
   background: #F1F1C0;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
@@ -353,8 +399,8 @@ b {
   padding: 0px 15px;
   gap: 5px;
 
-  width: 180px;
-  height: 180px;
+  width: var(--diameter-vision-icon);
+  height: var(--diameter-vision-icon);
 
   background: #F1C0C0;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
@@ -369,8 +415,8 @@ b {
   padding: 0px 15px;
   gap: 5px;
 
-  width: 180px;
-  height: 180px;
+  width: var(--diameter-vision-icon);
+  height: var(--diameter-vision-icon);
 
   background: #C3F5BA;
 
@@ -380,7 +426,7 @@ b {
 
 #visionDiv .visionIconDiv .title {
   font-weight: 600;
-  font-size: 24px;
+  font-size: var(--fs-sectionSubtitle);
 
   /* identical to box height */
   display: flex;
@@ -428,12 +474,12 @@ b {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 30px 40px;
-  gap: 15px;
-
-  width: 350px;
+  padding: var(--padding-card-view-ver) var(--padding-card-view-hor);
+  gap: var(--gap-card-view);
+  width:100%;
+  max-width: 350px;
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 30px;  
+  border-radius: var(--radius-card-view);  
   align-self: stretch;
   font-weight: 100;
 }
@@ -457,8 +503,8 @@ b {
 
 #educationComponent #cardViewDiv .cardView .cardHeader .cardTitleDiv .title {
   font-weight: 600;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: var(--fs-cardTitle);
+  line-height: var(--line-height-cardTitle);
   display: flex;
   align-items: center;
   
@@ -467,8 +513,8 @@ b {
 
 #educationComponent #cardViewDiv .cardView .cardHeader .cardTitleDiv .subtitle {
   font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: var(--fs-cardSubtitle);
+  line-height: var(--line-height-cardSubtitle);
   display: flex;
   align-items: center;
 
@@ -484,8 +530,8 @@ b {
 }
 
 #educationComponent #cardViewDiv .cardView .period {
-  font-size: 15px;
-  line-height: 20px;
+  font-size: var(--fs-cardBody);
+  line-height: var(--line-height-cardBody);
   display: flex;
   align-items: center;
   
@@ -493,8 +539,8 @@ b {
 }
 
 #educationComponent #cardViewDiv .cardView .contents {
-  font-size: 15px;
-  line-height: 20px;
+  font-size: var(--fs-cardBody);
+  line-height: var(--line-height-cardBody);
   display: flex;
   align-items: center;
 
@@ -520,20 +566,20 @@ b {
   align-items: center;
   padding: 0px;
   gap: 40px;
-  margin: 0 5%;
 }
 
 #experiencesComponent #cardViewDiv .cardView {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 30px 40px;
-  gap: 15px;
+  padding: var(--padding-card-view-ver) var(--padding-card-view-hor);
+  gap: var(--gap-card-view);
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 30px;  
+  border-radius: var(--radius-card-view);  
   align-self: stretch;
   font-weight: 100;
-  min-width: 350px;
+  width:100%;
+  max-width: 350px;
 }
 
 #experiencesComponent #cardViewDiv .cardView .cardHeader {
@@ -555,8 +601,8 @@ b {
 
 #experiencesComponent #cardViewDiv .cardView .cardHeader .cardTitleDiv .title {
   font-weight: 600;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: var(--fs-cardTitle);
+  line-height: var(--line-height-cardTitle);
   display: flex;
   align-items: center;
   
@@ -565,8 +611,8 @@ b {
 
 #experiencesComponent #cardViewDiv .cardView .cardHeader .cardTitleDiv .subtitle {
   font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: var(--fs-cardSubtitle);
+  line-height: var(--line-height-cardSubtitle);
   display: flex;
   align-items: center;
 
@@ -582,8 +628,8 @@ b {
 }
 
 #experiencesComponent #cardViewDiv .cardView .period {
-  font-size: 15px;
-  line-height: 20px;
+  font-size: var(--fs-cardBody);
+  line-height: var(--line-height-cardBody);
   display: flex;
   align-items: center;
   
@@ -591,15 +637,15 @@ b {
 }
 
 #experiencesComponent #cardViewDiv .cardView .contents {
-  font-size: 15px;
-  line-height: 20px;
+  font-size: var(--fs-cardBody);
+  line-height: var(--line-height-cardBody);
   align-items: center;
 
   color: #FFFFFF;
 }
 
 #experiencesComponent #cardViewDiv .cardView .tech {
-  font-size: 15px;
+  font-size: var(--fs-cardBody);
   align-items: center;
 
   color: #FFFFFF;
@@ -608,8 +654,8 @@ b {
 #experiencesComponent #cardViewDiv .cardView .more {
   font-style: italic;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: var(--fs-cardSubtitle);
+  line-height: var(--line-height-cardSubtitle);
   
   display: flex;
   align-items: center;
@@ -636,20 +682,20 @@ b {
   align-items: center;
   padding: 0px;
   gap: 40px;
-  margin: 0 5%;
 }
 
 #projectsComponent #cardViewDiv .cardView {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 30px 40px;
-  gap: 15px;
+  padding: var(--padding-card-view-ver) var(--padding-card-view-hor);
+  gap: var(--gap-card-view);
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 30px;  
+  border-radius: var(--radius-card-view);  
   align-self: stretch;
   font-weight: 100;
-  min-width: 350px;
+  width:100%;
+  max-width: 350px;
 }
 
 #projectsComponent #cardViewDiv .cardView .cardHeader {
@@ -671,8 +717,8 @@ b {
 
 #projectsComponent #cardViewDiv .cardView .cardHeader .cardTitleDiv .title {
   font-weight: 600;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: var(--fs-cardTitle);
+  line-height: var(--line-height-cardTitle);
   display: flex;
   align-items: center;
   
@@ -680,8 +726,8 @@ b {
 }
 
 #projectsComponent #cardViewDiv .cardView .period {
-  font-size: 15px;
-  line-height: 20px;
+  font-size: var(--fs-cardBody);
+  line-height: var(--line-height-cardBody);
   display: flex;
   align-items: center;
 
@@ -692,8 +738,8 @@ b {
   font-family: 'Open Sans Condensed';
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: var(--fs-cardSubtitle);
+  line-height: var(--line-height-cardSubtitle);
 
   color: #FFFFFF;
   
@@ -712,8 +758,8 @@ b {
 }
 
 #projectsComponent #cardViewDiv .cardView .summary {
-  font-size: 15px;
-  line-height: 20px;
+  font-size: var(--fs-cardBody);
+  line-height: var(--line-height-cardBody);
   display: flex;
   align-items: center;
   
@@ -721,15 +767,15 @@ b {
 }
 
 #projectsComponent #cardViewDiv .cardView .contents {
-  font-size: 15px;
-  line-height: 20px;
+  font-size: var(--fs-cardBody);
+  line-height: var(--line-height-cardBody);
   align-items: center;
 
   color: #FFFFFF;
 }
 
 #projectsComponent #cardViewDiv .cardView .tech {
-  font-size: 15px;
+  font-size: var(--fs-cardBody);
   align-items: center;
 
   color: #FFFFFF;
@@ -738,8 +784,8 @@ b {
 #projectsComponent #cardViewDiv .cardView .more {
   font-style: italic;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: var(--fs-cardSubtitle);
+  line-height: var(--line-height-cardSubtitle);
   
   display: flex;
   align-items: center;
@@ -757,7 +803,7 @@ b {
   align-items: center;
   padding: 25px 40px;
   gap: 16px;
-  height: 100vh;
+  min-height: 100vh;
 
 }
 
@@ -772,7 +818,7 @@ b {
   transform: translate(-50%, -50%);
 
   font-weight: 900;
-  font-size: 200px;
+  font-size: var(--fs-shadowTitle);
   text-align: center;
 
   color: #333643;
@@ -817,10 +863,10 @@ b {
 }
 
 
-#endSection #mainPosition {
+#endSection #fs-mainPosition {
   /* Frontend Developer */
   font-weight: 300;
-  font-size: 36px;
+  font-size: var(--fs-mainPosition);
 
   /* identical to box height */
   text-align: center;
@@ -834,11 +880,12 @@ b {
 
 #endSection #mainTitle {
   font-weight: 800;
-  font-size: 96px;
+  font-size: var(--fs-endTitle);
 
   /* identical to box height */
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  line-height: var(--line-height-endTitle);
 
   /* Inside auto layout */
   flex: none;
@@ -853,8 +900,8 @@ b {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 10px 160px;
-  gap: 40px;
+  padding: var(--padding-contacts);
+  gap: var(--gap-contacts);
 
   /* Inside auto layout */
 
@@ -870,12 +917,12 @@ b {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
+  padding: var(--padding-icon-ver) var(--padding-icon-hor);
   gap: 5px;
   
   background: rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
+  border-radius: var(--radius-border-icon);
 
   
   color: #FFFFFF;
@@ -899,11 +946,34 @@ b {
   font-family: 'Open Sans Condensed';
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 27px;
+  font-size: var(--fs-contactTitle);
   display: flex;
   align-items: center;
   text-align: center;
   
   color: #FFFFFF;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+  html {
+    font-size: 10px;
+  }
+
+  #visionDiv .visionIconDiv #embraceIcon {
+    width: var(--diameter-vision-icon-mb);
+    height: var(--diameter-vision-icon-mb);
+  }
+  
+  #visionDiv .visionIconDiv #directIcon {
+    width: var(--diameter-vision-icon-mb);
+    height: var(--diameter-vision-icon-mb);
+  }
+  
+  #visionDiv .visionIconDiv #impactIcon {
+    width: var(--diameter-vision-icon-mb);
+    height: var(--diameter-vision-icon-mb);
+  }
+
 }

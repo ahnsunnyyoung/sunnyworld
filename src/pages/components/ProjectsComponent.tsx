@@ -13,7 +13,7 @@ export default function ProjectsComponent() {
       "img": "/myoungji_logo.png",
       "img_alt": "Myoungji Logo",
       "moreLink": "https://github.com/ahnsunnyyoung/mju_applying_lecture_app",
-      "width": "45%"
+      "width": "100%"
     },
     {
       "title": "JjinMotJib",
@@ -28,7 +28,7 @@ export default function ProjectsComponent() {
       "img": "/jjinmotjib_logo.png",
       "img_alt": "Jjinmotjib Logo",
       "moreLink": "https://github.com/ahnsunnyyoung/capstone_frontend",
-      "width": "45%"
+      "width": "100%"
     },
     {
       "title": "Today's COVID-19",
@@ -41,7 +41,7 @@ export default function ProjectsComponent() {
       "tech": "React / Javascript / Expo",
       "img": "/todayscovid19_logo.png",
       "img_alt": "Today's Covid-19 Logo",
-      "width": "30%"
+      "width": "100%"
     },
     {
       "title": "StockSunny",
@@ -56,7 +56,7 @@ export default function ProjectsComponent() {
       "img": "/stocksunny_logo.png",
       "img_alt": "Stock Sunny Logo",
       "moreLink": "https://github.com/ahnsunnyyoung/react-native-stocksunny",
-      "width": "30%"
+      "width": "100%"
     },
     {
       "title": "Music genre Classification",
@@ -69,7 +69,7 @@ export default function ProjectsComponent() {
       "tech": "Tensorflow / PyTorch / Keras / Pandas",
       "img": "/MGC_logo.png",
       "img_alt": "Music genre Classification Logo",
-      "width": "30%"
+      "width": "100%"
     },
   ]
 

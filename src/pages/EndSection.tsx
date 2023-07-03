@@ -3,32 +3,32 @@ import { BsLinkedin, BsGithub, BsTelegram, BsInstagram, BsYoutube, BsFillEnvelop
 export default function EndSection() {
   const data = [
     {
-      "icon": <BsGithub size={25}/>,
+      "icon": <BsGithub size={'1.5rem'}/>,
       "url": "https://github.com/ahnsunnyyoung",
       "title": "Githb"
     },
     {
-      "icon": <BsLinkedin size={18}/>,
+      "icon": <BsLinkedin size={'1.5rem'}/>,
       "url": "https://www.linkedin.com/in/ahnsunnyyoung/",
       "title": "LinkedIn"
     },
     {
-      "icon": <BsTelegram size={18}/>,
+      "icon": <BsTelegram size={'1.5rem'}/>,
       "url": "https://t.me/ahntjs0",
       "title": "Telegram"
     },
     {
-      "icon": <BsFillEnvelopeAtFill size={18}/>,
+      "icon": <BsFillEnvelopeAtFill size={'1.5rem'}/>,
       "url": "mailto:ahnsunnyyoung@gmail.com",
       "title": "Email"
     },
     {
-      "icon": <BsInstagram size={18}/>,
+      "icon": <BsInstagram size={'1.5rem'}/>,
       "url": "https://www.instagram.com/ahn_sunny_young/",
       "title": "Instagram"
     },
     {
-      "icon": <BsYoutube size={18}/>,
+      "icon": <BsYoutube size={'1.5rem'}/>,
       "url": "https://www.youtube.com/@sunnyworld3118",
       "title": "Youtube"
     },
@@ -48,10 +48,10 @@ export default function EndSection() {
       </div>
 
       <div id='scrollUpDiv'>
-        <span id='scrollUp' onClick={scrollTop}><BsFillArrowUpCircleFill size={60}/></span>
+        <span id='scrollUp' onClick={scrollTop}><BsFillArrowUpCircleFill size={'3rem'}/></span>
       </div>
 
-      <span id='mainPosition'>Frontend Developer</span>
+      <span id='fs-mainPosition'>Frontend Developer</span>
       <span id='mainTitle'>Do you want some Sunshine?</span>
       <div id='contacts'>
         {data.map((item, index) =>

@@ -7,7 +7,7 @@ import EndSection from './EndSection';
 export default function Home() {
 
   useEffect(() => {
-  
+    
     const cursor = document.querySelector('.cursor');
   
     document.addEventListener('mousemove', e => {

@@ -12,7 +12,7 @@ export default function MainSection() {
         <span id='lastupdateInfo'>Latest update 6/20/2023</span>
       </div>
 
-      <span id='mainPosition'>Frontend Developer</span>
+      <span id='fs-mainPosition'>Frontend Developer</span>
       <span id='mainTitle'>Sunyoung Ahn</span>
       <span id='mainVision'>“Shine brightly like the sunshine”</span>
 
