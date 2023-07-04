@@ -1,30 +1,40 @@
-import React, { useEffect, } from "react";
+import React, { useEffect } from "react";
 import Head from 'next/head'
 import MainSection from './MainSection';
 import ContentsSection from './ContentsSection';
 import EndSection from './EndSection';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger); 
 
 export default function Home() {
 
   useEffect(() => {
+
+    gsap.to(".visionIconDiv", {
+      duration: 5,
+      opacity: 1, 
+      stagger: 0.2,
+      ease: "elastic", 
+      force3D: true,
+      scrollTrigger: {
+        trigger: ".visionIconDiv",
+      },
+    });
+
+    gsap.to(".etcSkillsIcon", {
+      duration: 2,
+      opacity: 1, 
+      stagger: 0.2,
+      ease: "elastic", 
+      force3D: true,
+      scrollTrigger: {
+        trigger: ".etcSkillsIcon",
+      },
+    });
     
-    const cursor = document.querySelector('.cursor');
-  
-    document.addEventListener('mousemove', e => {
-      if(cursor)
-        cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-    })
-  
-    document.addEventListener('click', () => {
-      if(cursor)
-        cursor.classList.add("expand");
-  
-        setTimeout(() => {
-          if(cursor)
-            cursor.classList.remove("expand");
-        }, 500)
-    })
   }, []);
+
 
   return (
     <div className="main-container">

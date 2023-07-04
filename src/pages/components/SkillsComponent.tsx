@@ -396,7 +396,7 @@ export default function SkillsComponent() {
         </span>
         <div id="etcSkillsDiv">
           {data[etc_idx].map((item, index) =>
-            <img className="cardIcon" src={item.img} alt={item.img_alt}/>
+            <img className="etcSkillsIcon" key={index} src={item.img} alt={item.img_alt}/>
           )}
         </div>
       </div>

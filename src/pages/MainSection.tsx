@@ -9,7 +9,7 @@ export default function MainSection() {
         <span id='shadowSunny'>Sunny</span>
       </div>
       <div id='lastupdateInfoDiv'>
-        <span id='lastupdateInfo'>Latest update 4/Jul/2023</span>
+        <span id='lastupdateInfo'>Latest update 5/Jul/2023</span>
       </div>
 
       <span id='mainPosition'>Frontend Developer</span>
