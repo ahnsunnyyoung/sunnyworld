@@ -13,7 +13,7 @@ export default function ExperiencesComponent() {
       "img": "/hotelysis_logo.png",
       "img_alt": "Hotelysis Logo",
       "moreLink": "https://hbi.hotelysis.com/index",
-      "width": "100%"
+      "width": "90%"
     },
     {
       "title": "VAIV Company Inc.",
@@ -25,7 +25,7 @@ export default function ExperiencesComponent() {
       "img": "/vaiv_logo.png",
       "img_alt": "Vaiv Logo",
       "moreLink": "https://www.vaiv.kr/",
-      "width": "100%"
+      "width": "30%"
     },
     {
       "title": "Myoungji University",
@@ -38,7 +38,7 @@ export default function ExperiencesComponent() {
       "tech": "Tensorflow / Python / Jupyter / Matlab / Anaconda / Linux / Docker",
       "img": "/myoungji_logo.png",
       "img_alt": "Myoungji Logo",
-      "width": "100%"
+      "width": "30%"
     },
     {
       "title": "Starbucks",
@@ -49,7 +49,7 @@ export default function ExperiencesComponent() {
       ],
       "img": "/starbucks_logo.png",
       "img_alt": "Starbucks Logo",
-      "width": "100%"
+      "width": "30%"
     },
   ]
 

@@ -8,7 +8,8 @@ export default function EducationComponent() {
       "period": "February 2018 - June 2022",
       "contents": "4.3/4.5 GPA",
       "img": "/myoungji_logo.png",
-      "img_alt": "Myoungji logo"
+      "img_alt": "Myoungji logo",
+      "width": "30%"
     },
     {
       "title": "Fontys of Applied Science",
@@ -16,7 +17,8 @@ export default function EducationComponent() {
       "period": "September 2021 - February 2022",
       "contents": "BSc in Information & Communication Technology",
       "img": "/fontys_logo.png",
-      "img_alt": "Fontys logo"
+      "img_alt": "Fontys logo",
+      "width": "30%"
     },
     {
       "title": "Griffith College",
@@ -24,7 +26,8 @@ export default function EducationComponent() {
       "period": "September 2022 - September 2023",
       "contents": "",
       "img": "/griffith_logo.png",
-      "img_alt": "Griffith logo"
+      "img_alt": "Griffith logo",
+      "width": "30%"
     }
   ]
 
@@ -41,7 +44,7 @@ export default function EducationComponent() {
 
       <div id="cardViewDiv">
         {data.map((item, index) =>
-          <div className="cardView" key={index}>
+          <div className="cardView" key={index} style={{"width":item.width}}>
             <div className="cardHeader">
               <img className="cardIcon" src={item.img} alt={item.img_alt}/>
               <div className="cardTitleDiv">
