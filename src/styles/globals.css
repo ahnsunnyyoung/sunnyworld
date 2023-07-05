@@ -33,7 +33,9 @@ body {
   --fs-mainVision: 2rem;
 
   --fs-sectionTitle: 2rem;
+  --fs-sectionTitle-mb: 1.7rem;
   --fs-sectionSubtitle: 1.75rem;
+  --fs-sectionSubtitle-mb: 1.5rem;
   --fs-skillsTitle: 1.5rem;
 
   --fs-aboutBody: 1.1rem;
@@ -72,14 +74,15 @@ body {
 
   --gap-sections: 20rem;
   --gap-contents: 2rem;
-  --gap-contents-mb: 1rem;
+  --gap-contents-mb: 0rem;
   --gap-card-view: 1rem;
   --gap-card-contents: 1rem;
   --gap-card-header: 0.8rem;
   --gap-contacts: 2.5rem;
   --gap-contacts-mb: 1rem;
+  --gap-etcSkillsIcon: 0.8rem;
 
-  --min-width-card-view: 24rem;
+  --min-width-card-view: 22rem;
   
 }
 
@@ -180,12 +183,12 @@ b {
 
 #mainSection #shadowSunnyDiv {
   position: absolute;
+  top: 50%;
+  left: 0%;
 }
 
 #mainSection #shadowSunnyDiv #shadowSunny {
   position:absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
 
   font-weight: 900;
@@ -198,11 +201,6 @@ b {
   mix-blend-mode: overlay;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
   z-index: 0;
 
 }
@@ -353,6 +351,10 @@ b {
   text-decoration-color: #EF5D70;
 }
 
+.contents-gap {
+  gap: var(--gap-contents);
+}
+
 /* About */
 
 #aboutComponent {
@@ -361,7 +363,6 @@ b {
   justify-content: center;
   align-items: center;
   padding: 10px 0px;
-  gap: var(--gap-contents);
 
   /* Inside auto layout */
   flex: none;
@@ -468,7 +469,6 @@ b {
   justify-content: center;
   align-items: center;
   padding: 0px;
-  gap: var(--gap-contents);
 }
 
 #skillsComponent #skillsWordCloud {
@@ -484,6 +484,7 @@ b {
 }
 
 #skillsComponent #skillsContentsDiv #mainSkillsDiv {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -493,6 +494,7 @@ b {
 
 #skillsComponent #skillsContentsDiv #mainSkillsDiv .twoColDiv {
   display: flex;
+  flex: auto;
   padding: 10px 0px;
   justify-content: center;
   align-items: flex-start;
@@ -501,6 +503,7 @@ b {
 
 #skillsComponent #skillsContentsDiv #mainSkillsDiv .twoColDiv .oneColDiv {
   display: flex;
+  flex: auto;
   padding: 10px;
   flex-direction: column;
   justify-content: center;
@@ -515,6 +518,8 @@ b {
 }
 
 #skillsComponent #skillsContentsDiv #mainSkillsDiv .twoColDiv .oneColDiv .cardViewDiv {
+  width: 100%;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -602,7 +607,7 @@ b {
 #skillsComponent #skillsContentsDiv #etcSkillsDiv {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gap-contents-mb);
+  gap: var(--gap-etcSkillsIcon);
 }
 
 .etcSkillsIcon {
@@ -618,454 +623,14 @@ b {
   background: white;
   border-radius: var(--radius-skill-bar);
 }
-#Skill-100 {
-  width: 100%;
-  animation: Animate-100 var(--seconds-skill-animation);
-  -webkit-animation: Animate-100 var(--seconds-skill-animation);
-  -moz-animation: Animate-100 var(--seconds-skill-animation);
-  -o-animation: Animate-100 var(--seconds-skill-animation);
+.SkillAni {
+  width:0%;
+}
+.SkillPer {
   height: var(--height-skill-bar);
   position: absolute;
   background-color: var(--color-primary);
-  opacity: 100%;
   border-radius: var(--radius-skill-bar);
-}
-@keyframes Animate-100 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 100%
-  }
-}
-@-webkit-keyframes Animate-100 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 100%
-  }
-}
-@-moz-keyframes Animate-100 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 100%
-  }
-}
-@-o-keyframes Animate-100 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 100%
-  }
-}
-
-#Skill-90 {
-  width: 90%;
-  animation: Animate-90 var(--seconds-skill-animation);
-  -webkit-animation: Animate-90 var(--seconds-skill-animation);
-  -moz-animation: Animate-90 var(--seconds-skill-animation);
-  -o-animation: Animate-90 var(--seconds-skill-animation);
-  height: var(--height-skill-bar);
-  position: absolute;
-  background-color: var(--color-primary);
-  opacity: 90%;
-  border-radius: var(--radius-skill-bar);
-}
-@keyframes Animate-90 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 90%
-  }
-}
-@-webkit-keyframes Animate-90 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 90%
-  }
-}
-@-moz-keyframes Animate-90 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 90%
-  }
-}
-@-o-keyframes Animate-90 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 90%
-  }
-}
-
-#Skill-80 {
-  width: 80%;
-  animation: Animate-80 var(--seconds-skill-animation);
-  -webkit-animation: Animate-80 var(--seconds-skill-animation);
-  -moz-animation: Animate-80 var(--seconds-skill-animation);
-  -o-animation: Animate-80 var(--seconds-skill-animation);
-  height: var(--height-skill-bar);
-  position: absolute;
-  background-color: var(--color-primary);
-  opacity: 80%;
-  border-radius: var(--radius-skill-bar);
-}
-@keyframes Animate-80 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 80%
-  }
-}
-@-webkit-keyframes Animate-80 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 80%
-  }
-}
-@-moz-keyframes Animate-80 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 80%
-  }
-}
-@-o-keyframes Animate-80 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 80%
-  }
-}
-
-#Skill-70 {
-  width: 70%;
-  animation: Animate-70 var(--seconds-skill-animation);
-  -webkit-animation: Animate-70 var(--seconds-skill-animation);
-  -moz-animation: Animate-70 var(--seconds-skill-animation);
-  -o-animation: Animate-70 var(--seconds-skill-animation);
-  height: var(--height-skill-bar);
-  position: absolute;
-  background-color: var(--color-primary);
-  opacity: 70%;
-  border-radius: var(--radius-skill-bar);
-}
-@keyframes Animate-70 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 70%
-  }
-}
-@-webkit-keyframes Animate-70 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 70%
-  }
-}
-@-moz-keyframes Animate-70 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 70%
-  }
-}
-@-o-keyframes Animate-70 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 70%
-  }
-}
-
-#Skill-60 {
-  width: 60%;
-  animation: Animate-60 var(--seconds-skill-animation);
-  -webkit-animation: Animate-60 var(--seconds-skill-animation);
-  -moz-animation: Animate-60 var(--seconds-skill-animation);
-  -o-animation: Animate-60 var(--seconds-skill-animation);
-  height: var(--height-skill-bar);
-  position: absolute;
-  background-color: var(--color-primary);
-  opacity: 60%;
-  border-radius: var(--radius-skill-bar);
-}
-@keyframes Animate-60 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 60%
-  }
-}
-@-webkit-keyframes Animate-60 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 60%
-  }
-}
-@-moz-keyframes Animate-60 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 60%
-  }
-}
-@-o-keyframes Animate-60 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 60%
-  }
-}
-
-#Skill-50 {
-  width: 50%;
-  animation: Animate-50 var(--seconds-skill-animation);
-  -webkit-animation: Animate-50 var(--seconds-skill-animation);
-  -moz-animation: Animate-50 var(--seconds-skill-animation);
-  -o-animation: Animate-50 var(--seconds-skill-animation);
-  height: var(--height-skill-bar);
-  position: absolute;
-  background-color: var(--color-primary);
-  opacity: 50%;
-  border-radius: var(--radius-skill-bar);
-}
-@keyframes Animate-50 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 50%
-  }
-}
-@-webkit-keyframes Animate-50 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 50%
-  }
-}
-@-moz-keyframes Animate-50 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 50%
-  }
-}
-@-o-keyframes Animate-50 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 50%
-  }
-}
-
-#Skill-40 {
-  width: 40%;
-  animation: Animate-40 var(--seconds-skill-animation);
-  -webkit-animation: Animate-40 var(--seconds-skill-animation);
-  -moz-animation: Animate-40 var(--seconds-skill-animation);
-  -o-animation: Animate-40 var(--seconds-skill-animation);
-  height: var(--height-skill-bar);
-  position: absolute;
-  background-color: var(--color-primary);
-  opacity: 40%;
-  border-radius: var(--radius-skill-bar);
-}
-@keyframes Animate-40 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 40%
-  }
-}
-@-webkit-keyframes Animate-40 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 40%
-  }
-}
-@-moz-keyframes Animate-40 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 40%
-  }
-}
-@-o-keyframes Animate-40 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 40%
-  }
-}
-
-#Skill-30 {
-  width: 30%;
-  animation: Animate-30 var(--seconds-skill-animation);
-  -webkit-animation: Animate-30 var(--seconds-skill-animation);
-  -moz-animation: Animate-30 var(--seconds-skill-animation);
-  -o-animation: Animate-30 var(--seconds-skill-animation);
-  height: var(--height-skill-bar);
-  position: absolute;
-  background-color: var(--color-primary);
-  opacity: 30%;
-  border-radius: var(--radius-skill-bar);
-}
-@keyframes Animate-30 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 30%
-  }
-}
-@-webkit-keyframes Animate-30 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 30%
-  }
-}
-@-moz-keyframes Animate-30 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 30%
-  }
-}
-@-o-keyframes Animate-30 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 30%
-  }
-}
-
-#Skill-20 {
-  width: 20%;
-  animation: Animate-20 var(--seconds-skill-animation);
-  -webkit-animation: Animate-20 var(--seconds-skill-animation);
-  -moz-animation: Animate-20 var(--seconds-skill-animation);
-  -o-animation: Animate-20 var(--seconds-skill-animation);
-  height: var(--height-skill-bar);
-  position: absolute;
-  background-color: var(--color-primary);
-  opacity: 20%;
-  border-radius: var(--radius-skill-bar);
-}
-@keyframes Animate-20 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 20%
-  }
-}
-@-webkit-keyframes Animate-20 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 20%
-  }
-}
-@-moz-keyframes Animate-20 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 20%
-  }
-}
-@-o-keyframes Animate-20 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 20%
-  }
-}
-
-#Skill-10 {
-  width: 10%;
-  animation: Animate-10 var(--seconds-skill-animation);
-  -webkit-animation: Animate-10 var(--seconds-skill-animation);
-  -moz-animation: Animate-10 var(--seconds-skill-animation);
-  -o-animation: Animate-10 var(--seconds-skill-animation);
-  height: var(--height-skill-bar);
-  position: absolute;
-  background-color: var(--color-primary);
-  opacity: 10%;
-  border-radius: var(--radius-skill-bar);
-}
-@keyframes Animate-10 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 10%
-  }
-}
-@-webkit-keyframes Animate-10 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 10%
-  }
-}
-@-moz-keyframes Animate-10 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 10%
-  }
-}
-@-o-keyframes Animate-10 {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 10%
-  }
 }
 
 
@@ -1077,7 +642,6 @@ b {
   justify-content: center;
   align-items: center;
   padding: 0px;
-  gap: var(--gap-contents);
 }
 
 #educationComponent #cardViewDiv {
@@ -1432,13 +996,11 @@ b {
 
 #endSection #shadowSunnyDiv {
   position: absolute;
+  mix-blend-mode: overlay;
 }
 
 #endSection #shadowSunnyDiv #shadowSunny {
-  position:absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position:sticky;
 
   font-weight: 900;
   font-size: var(--fs-shadowTitle);
@@ -1447,7 +1009,6 @@ b {
   color: #333643;
 
   background-color: inherit;
-  mix-blend-mode: overlay;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   /* Inside auto layout */
@@ -1577,11 +1138,22 @@ b {
   color: #FFFFFF;
 }
 
+.pulse {
+  animation: pulse 1.5s infinite ease-in-out alternate;
+}
+@keyframes pulse {
+  from { transform: scale(0.8); }
+  to { transform: scale(1); }
+}
 
 @media only screen and (max-width: 480px) {
 
   html {
     font-size: 13px;
+  }
+
+  .contents-gap {
+    gap: var(--gap-contents-mb);
   }
 
   #mainSection #shadowSunnyDiv #shadowSunny {
@@ -1590,6 +1162,14 @@ b {
 
   #mainSection #mainTitle {
     font-size: var(--fs-mainTitle-mb);
+  }
+
+  .componentTitle .title {
+    font-size: var(--fs-sectionTitle-mb);
+  }
+  
+  .componentTitle .subtitle {
+    font-size: var(--fs-sectionSubtitle-mb);
   }
 
   #contentsSection {

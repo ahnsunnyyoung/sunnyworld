@@ -2,7 +2,7 @@
 export default function AboutComponent() {
 
   return (
-    <div id='aboutComponent'>
+    <div id='aboutComponent' className="contents-gap">
       <div className='componentTitle'>
         <div className='title'>
           About Sunny

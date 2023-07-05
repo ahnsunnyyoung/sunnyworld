@@ -32,7 +32,7 @@ export default function EducationComponent() {
   ]
 
   return (
-    <div id='educationComponent'>
+    <div id='educationComponent' className="contents-gap">
       <div className='componentTitle'>
         <div className='title'>
           Education

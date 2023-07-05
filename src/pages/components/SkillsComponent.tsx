@@ -273,7 +273,7 @@ export default function SkillsComponent() {
   ];
 
   return (
-    <div id='skillsComponent'>
+    <div id='skillsComponent' className="contents-gap">
 
       <div className='componentTitle'>
         <div className='title'>
@@ -305,7 +305,7 @@ export default function SkillsComponent() {
                         </div>
                       </div>
                       <div className="SkillBar">
-                        <div id={"Skill-"+item.percent}>
+                        <div className={"SkillPer Skill-"+item.percent}>
                         </div>
                       </div>
                     </div>
@@ -329,7 +329,7 @@ export default function SkillsComponent() {
                         </div>
                       </div>
                       <div className="SkillBar">
-                        <div id={"Skill-"+item.percent}>
+                        <div className={"SkillPer Skill-"+item.percent}>
                         </div>
                       </div>
                     </div>
@@ -355,7 +355,7 @@ export default function SkillsComponent() {
                         </div>
                       </div>
                       <div className="SkillBar">
-                        <div id={"Skill-"+item.percent}>
+                        <div className={"SkillPer Skill-"+item.percent}>
                         </div>
                       </div>
                     </div>
@@ -379,7 +379,7 @@ export default function SkillsComponent() {
                         </div>
                       </div>
                       <div className="SkillBar">
-                        <div id={"Skill-"+item.percent}>
+                        <div className={"SkillPer Skill-"+item.percent}>
                         </div>
                       </div>
                     </div>

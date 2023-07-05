@@ -13,7 +13,7 @@ export default function ExperiencesComponent() {
       "img": "/hotelysis_logo.png",
       "img_alt": "Hotelysis Logo",
       "moreLink": "https://hbi.hotelysis.com/index",
-      "width": "90%"
+      "width": "100%"
     },
     {
       "title": "VAIV Company Inc.",
@@ -54,7 +54,7 @@ export default function ExperiencesComponent() {
   ]
 
   return (
-    <div id='experiencesComponent'>
+    <div id='experiencesComponent' className="contents-gap">
       <div className='componentTitle'>
         <div className='title'>
           Experiences

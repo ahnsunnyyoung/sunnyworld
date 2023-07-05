@@ -43,7 +43,7 @@ export default function EndSection() {
     <section id='endSection'>
 
       {/* absolute background */}
-      <div id='shadowSunnyDiv'>
+      <div id='shadowSunnyDiv' className='pulse'>
         <span id='shadowSunny'>Sunny</span>
       </div>
 

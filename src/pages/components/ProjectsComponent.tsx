@@ -13,7 +13,7 @@ export default function ProjectsComponent() {
       "img": "/myoungji_logo.png",
       "img_alt": "Myoungji Logo",
       "moreLink": "https://github.com/ahnsunnyyoung/mju_applying_lecture_app",
-      "width": "45%"
+      "width": "48%"
     },
     {
       "title": "JjinMotJib",
@@ -28,7 +28,7 @@ export default function ProjectsComponent() {
       "img": "/jjinmotjib_logo.png",
       "img_alt": "Jjinmotjib Logo",
       "moreLink": "https://github.com/ahnsunnyyoung/capstone_frontend",
-      "width": "45%"
+      "width": "48%"
     },
     {
       "title": "Today's COVID-19",
@@ -74,7 +74,7 @@ export default function ProjectsComponent() {
   ]
 
   return (
-    <div id='projectsComponent'>
+    <div id='projectsComponent' className="contents-gap">
       <div className='componentTitle'>
         <div className='title'>
           Projects

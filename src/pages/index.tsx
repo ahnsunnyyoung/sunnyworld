@@ -10,27 +10,195 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
 
   useEffect(() => {
-
-    gsap.to(".visionIconDiv", {
-      duration: 5,
-      opacity: 1, 
-      stagger: 0.2,
-      ease: "elastic", 
-      force3D: true,
+    
+    gsap.to("#mainSection #shadowSunnyDiv", {
+      duration: 4,
+      left: '50%',
+      ease: "expo", 
       scrollTrigger: {
-        trigger: ".visionIconDiv",
+        trigger: "#mainSection #shadowSunnyDiv",
+        // toggleActions: "play none restart none",
       },
+    });
+
+    gsap.to("#aboutComponent", {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#aboutComponent",
+        start: 'bottom 50%',
+        scrub: true
+      },
+    });
+
+    gsap.to("#skillsComponent", {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#skillsComponent",
+        start: 'bottom 50%',
+        scrub: true
+      },
+    });
+
+    gsap.to("#educationComponent", {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#educationComponent",
+        start: 'bottom 50%',
+        scrub: true
+      },
+    });
+
+    gsap.to("#experiencesComponent", {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#experiencesComponent",
+        start: 'bottom 50%',
+        scrub: true
+      },
+    });
+
+    gsap.to("#projectsComponent", {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#projectsComponent",
+        start: 'bottom 50%',
+        scrub: true
+      },
+    });
+
+    document.querySelectorAll(".visionIconDiv").forEach((icon, i) => {  
+      gsap.to(icon, {
+        duration: 2,
+        opacity: 1, 
+        stagger: 0.2,
+        force3D: true,
+        delay: i * 0.5,
+        scrollTrigger: {
+          trigger: ".visionIconDiv",
+          toggleActions: "restart",
+      },
+      });
     });
 
     gsap.to(".etcSkillsIcon", {
       duration: 2,
       opacity: 1, 
       stagger: 0.2,
+      scale: 1.1,
       ease: "elastic", 
       force3D: true,
       scrollTrigger: {
         trigger: ".etcSkillsIcon",
+        toggleActions: "restart",
       },
+    });
+
+    gsap.to(".Skill-100", 
+      {
+        width: '100%',
+        opacity: '100%',
+        duration: 4,
+        ease: "expo", 
+        scrollTrigger: {
+          trigger: "#mainSkillsDiv",
+          toggleActions: "restart",
+        },
+    });
+
+    gsap.to(".Skill-90", 
+      {
+        width: '90%',
+        opacity: '90%',
+        duration: 4,
+        ease: "expo", 
+        scrollTrigger: {
+          trigger: "#mainSkillsDiv",
+          toggleActions: "restart",
+        },
+    });
+
+    gsap.to(".Skill-80", 
+      {
+        width: '80%',
+        opacity: '80%',
+        duration: 4,
+        ease: "expo", 
+        scrollTrigger: {
+          trigger: "#mainSkillsDiv",
+          toggleActions: "restart",
+        },
+    });
+
+    gsap.to(".Skill-70", 
+      {
+        width: '70%',
+        opacity: '70%',
+        duration: 4,
+        ease: "expo", 
+        scrollTrigger: {
+          trigger: "#mainSkillsDiv",
+          toggleActions: "restart",
+        },
+    });
+
+    gsap.to(".Skill-60", 
+      {
+        width: '60%',
+        opacity: '60%',
+        duration: 4,
+        ease: "expo", 
+        scrollTrigger: {
+          trigger: "#mainSkillsDiv",
+          toggleActions: "restart",
+        },
+    });
+
+    gsap.to(".Skill-50", 
+      {
+        width: '50%',
+        opacity: '50%',
+        duration: 4,
+        ease: "expo", 
+        scrollTrigger: {
+          trigger: "#mainSkillsDiv",
+          toggleActions: "restart",
+        },
+    });
+
+    gsap.to(".Skill-40", 
+      {
+        width: '40%',
+        opacity: '40%',
+        duration: 4,
+        ease: "expo", 
+        scrollTrigger: {
+          trigger: "#mainSkillsDiv",
+          toggleActions: "restart",
+        },
+    });
+
+    gsap.to(".Skill-30", 
+      {
+        width: '30%',
+        opacity: '30%',
+        duration: 4,
+        ease: "expo", 
+        scrollTrigger: {
+          trigger: "#mainSkillsDiv",
+          toggleActions: "restart",
+        },
+    });
+
+    gsap.to(".Skill-20", 
+      {
+        width: '20%',
+        opacity: '20%',
+        duration: 4,
+        ease: "expo", 
+        scrollTrigger: {
+          trigger: "#mainSkillsDiv",
+          toggleActions: "restart",
+        },
     });
     
   }, []);
