@@ -11,12 +11,12 @@ export default function Home() {
 
   useEffect(() => {
     
-    gsap.to("#mainSection #shadowSunnyDiv", {
+    gsap.to(".shadowSunnyDivAni", {
       duration: 4,
       left: '50%',
       ease: "expo", 
       scrollTrigger: {
-        trigger: "#mainSection #shadowSunnyDiv",
+        trigger: ".shadowSunnyDivAni",
         // toggleActions: "play none restart none",
       },
     });
@@ -66,7 +66,7 @@ export default function Home() {
       },
     });
 
-    document.querySelectorAll(".visionIconDiv").forEach((icon, i) => {  
+    document.querySelectorAll(".visionIconDivAni").forEach((icon, i) => {  
       gsap.to(icon, {
         duration: 2,
         opacity: 1, 
@@ -74,7 +74,7 @@ export default function Home() {
         force3D: true,
         delay: i * 0.5,
         scrollTrigger: {
-          trigger: ".visionIconDiv",
+          trigger: ".visionIconDivAni",
           toggleActions: "restart",
       },
       });

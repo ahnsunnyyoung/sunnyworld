@@ -1,0 +1,66 @@
+.body {
+  font-size: var(--fs-aboutBody);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+}
+
+/* Vision */
+
+.visionDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0px 100px;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.visionIconDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+}
+
+.visionIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+  gap: 5px;
+
+  width: var(--diameter-vision-icon);
+  height: var(--diameter-vision-icon);
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+}
+
+.embraceColor {
+  background: #F1F1C0;
+}
+
+.directColor {
+  background: #F1C0C0;
+}
+
+.impactColor {
+  background: #C3F5BA;
+}
+
+.title {
+  font-weight: 600;
+  font-size: var(--fs-visionTitle);
+
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  text-align: center;
+}

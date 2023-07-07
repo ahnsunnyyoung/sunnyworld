@@ -1,20 +1,21 @@
+import styles from "@/styles/MainSection.module.css"
 
 export default function MainSection() {
 
   return (
-    <section id='mainSection'>
+    <section id='mainSection' className={`fullscreen_section`}>
 
       {/* absolute background */}
-      <div id='shadowSunnyDiv'>
-        <span id='shadowSunny'>Sunny</span>
+      <div className={`${styles.shadowSunnyDiv} shadowSunnyDivAni`}>
+        <span className={`${styles.shadowSunny}`}>Sunny</span>
       </div>
-      <div id='lastupdateInfoDiv'>
-        <span id='lastupdateInfo'>Latest update 7/Jul/2023</span>
+      <div className={`${styles.lastupdateInfoDiv}`}>
+        <span className={`${styles.lastupdateInfo}`}>Latest update 7/Jul/2023</span>
       </div>
 
-      <span id='mainPosition'>Frontend Developer</span>
-      <span id='mainTitle'>Sunyoung Ahn</span>
-      <span id='mainVision'>“Shine brightly like the sunshine”</span>
+      <span className={`${styles.mainPosition}`}>Frontend Developer</span>
+      <span className={`${styles.mainTitle}`}>Sunyoung Ahn</span>
+      <span className={`${styles.mainVision}`}>“Shine brightly like the sunshine”</span>
 
     </section>
   )
