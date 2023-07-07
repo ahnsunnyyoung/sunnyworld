@@ -38,7 +38,7 @@ body {
   --fs-sectionSubtitle-mb: 1.5rem;
   --fs-skillsTitle: 1.5rem;
 
-  --fs-aboutBody: 1.1rem;
+  --fs-aboutBody: 1.2rem;
   --fs-visionTitle: 1.5rem;
 
   --fs-cardTitle: 1.3rem;
@@ -73,8 +73,8 @@ body {
   --seconds-skill-animation: 3s;
 
   --gap-sections: 20rem;
-  --gap-contents: 2rem;
-  --gap-contents-mb: 0rem;
+  --gap-contents: 2.5rem;
+  --gap-contents-mb: 0.5rem;
   --gap-card-view: 1rem;
   --gap-card-contents: 1rem;
   --gap-card-header: 0.8rem;
@@ -89,6 +89,10 @@ body {
 /* remove scroll bar */
 ::-webkit-scrollbar {
   display: none;
+}
+
+#__next {
+  background: inherit;
 }
 
 .cursor {
@@ -469,10 +473,6 @@ b {
   justify-content: center;
   align-items: center;
   padding: 0px;
-}
-
-#skillsComponent #skillsWordCloud {
-  width: 70%;
 }
 
 #skillsComponent #skillsContentsDiv {

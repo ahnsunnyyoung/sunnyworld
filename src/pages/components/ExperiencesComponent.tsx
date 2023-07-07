@@ -89,7 +89,7 @@ export default function ExperiencesComponent() {
               </div>
             }
             {("moreLink" in item) &&
-              <a className="more" href={item.moreLink}>
+              <a className="more" href={item.moreLink} target="_blank">
                 See more &#62;
               </a>
             }

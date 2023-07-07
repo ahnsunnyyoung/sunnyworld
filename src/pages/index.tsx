@@ -100,7 +100,7 @@ export default function Home() {
         duration: 4,
         ease: "expo", 
         scrollTrigger: {
-          trigger: "#mainSkillsDiv",
+          trigger: ".Skill-100",
           toggleActions: "restart",
         },
     });
@@ -112,7 +112,7 @@ export default function Home() {
         duration: 4,
         ease: "expo", 
         scrollTrigger: {
-          trigger: "#mainSkillsDiv",
+          trigger: ".Skill-90",
           toggleActions: "restart",
         },
     });
@@ -124,7 +124,7 @@ export default function Home() {
         duration: 4,
         ease: "expo", 
         scrollTrigger: {
-          trigger: "#mainSkillsDiv",
+          trigger: ".Skill-80",
           toggleActions: "restart",
         },
     });
@@ -136,7 +136,7 @@ export default function Home() {
         duration: 4,
         ease: "expo", 
         scrollTrigger: {
-          trigger: "#mainSkillsDiv",
+          trigger: ".Skill-70",
           toggleActions: "restart",
         },
     });
@@ -148,7 +148,7 @@ export default function Home() {
         duration: 4,
         ease: "expo", 
         scrollTrigger: {
-          trigger: "#mainSkillsDiv",
+          trigger: ".Skill-60",
           toggleActions: "restart",
         },
     });
@@ -160,7 +160,7 @@ export default function Home() {
         duration: 4,
         ease: "expo", 
         scrollTrigger: {
-          trigger: "#mainSkillsDiv",
+          trigger: ".Skill-50",
           toggleActions: "restart",
         },
     });
@@ -172,7 +172,7 @@ export default function Home() {
         duration: 4,
         ease: "expo", 
         scrollTrigger: {
-          trigger: "#mainSkillsDiv",
+          trigger: ".Skill-40",
           toggleActions: "restart",
         },
     });
@@ -184,7 +184,7 @@ export default function Home() {
         duration: 4,
         ease: "expo", 
         scrollTrigger: {
-          trigger: "#mainSkillsDiv",
+          trigger: ".Skill-30",
           toggleActions: "restart",
         },
     });
@@ -196,7 +196,7 @@ export default function Home() {
         duration: 4,
         ease: "expo", 
         scrollTrigger: {
-          trigger: "#mainSkillsDiv",
+          trigger: ".Skill-20",
           toggleActions: "restart",
         },
     });
