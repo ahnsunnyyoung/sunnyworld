@@ -285,22 +285,22 @@ export default function SkillsComponent() {
         </div>
       </div>
 
-      <div className={`${styles.skillsContentsDiv}`}>
+      <div className={`${styles.skillsContentsDiv} contents-gap`}>
 
         <div className={`${styles.mainSkillsDiv}`}>
 
           <div className={`${styles.twoColDiv}`}>
             <div className={`${styles.oneColDiv}`}>
-              <span className={`${styles.skillsCategoryTtitle}`}>
+              <span className={`${styles.skillsCategoryTitle}`}>
                 Language
               </span>
-              <div className={`${styles.cardViewDiv}`}>
+              <div className={`${styles.cardViewDiv} color-white`}>
                 {data[lang_idx].map((item, index) =>
                   ("period" in item)&&
                     <div className={`${styles.cardView}`} key={index}>
-                      <div className={`${styles.cardHeader}`}>
+                      <div className={`cardHeader`}>
                         <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
-                        <div className={`${styles.cardTitleDiv}`}>
+                        <div className={`cardTitleDiv flex-col`}>
                           <span className={`${styles.title}`}>{item.title}</span>
                           <span className={`${styles.period}`}>{item.period} years</span>
                         </div>
@@ -315,16 +315,16 @@ export default function SkillsComponent() {
             </div>
 
             <div className={`${styles.oneColDiv}`}>
-              <span className={`${styles.skillsCategoryTtitle}`}>
+              <span className={`${styles.skillsCategoryTitle}`}>
                 Frontend
               </span>
-              <div className={`${styles.cardViewDiv}`}>
+              <div className={`${styles.cardViewDiv} color-white`}>
                 {data[front_idx].map((item, index) =>
                   ("period" in item)&&
                     <div className={`${styles.cardView}`} key={index}>
-                      <div className={`${styles.cardHeader}`}>
+                      <div className={`cardHeader`}>
                         <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
-                        <div className={`${styles.cardTitleDiv}`}>
+                        <div className={`cardTitleDiv flex-col`}>
                           <span className={`${styles.title}`}>{item.title}</span>
                           <span className={`${styles.period}`}>{item.period} years</span>
                         </div>
@@ -341,16 +341,16 @@ export default function SkillsComponent() {
 
           <div className={`${styles.twoColDiv}`}>
             <div className={`${styles.oneColDiv}`}>
-              <span className={`${styles.skillsCategoryTtitle}`}>
+              <span className={`${styles.skillsCategoryTitle}`}>
                 Backend
               </span>
-              <div className={`${styles.cardViewDiv}`}>
+              <div className={`${styles.cardViewDiv} color-white`}>
                 {data[back_idx].map((item, index) =>
                   ("period" in item)&&
                     <div className={`${styles.cardView}`} key={index}>
-                      <div className={`${styles.cardHeader}`}>
+                      <div className={`cardHeader`}>
                         <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
-                        <div className={`${styles.cardTitleDiv}`}>
+                        <div className={`cardTitleDiv flex-col`}>
                           <span className={`${styles.title}`}>{item.title}</span>
                           <span className={`${styles.period}`}>{item.period} years</span>
                         </div>
@@ -365,16 +365,16 @@ export default function SkillsComponent() {
             </div>
 
             <div className={`${styles.oneColDiv}`}>
-              <span className={`${styles.skillsCategoryTtitle}`}>
+              <span className={`${styles.skillsCategoryTitle}`}>
                 Others
               </span>
-              <div className={`${styles.cardViewDiv}`}>
+              <div className={`${styles.cardViewDiv} color-white`}>
                 {data[others_idx].map((item, index) =>
                   ("period" in item)&&
                     <div className={`${styles.cardView}`} key={index}>
-                      <div className={`${styles.cardHeader}`}>
+                      <div className={`cardHeader`}>
                         <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
-                        <div className={`${styles.cardTitleDiv}`}>
+                        <div className={`cardTitleDiv flex-col`}>
                           <span className={`${styles.title}`}>{item.title}</span>
                           <span className={`${styles.period}`}>{item.period} years</span>
                         </div>
@@ -392,7 +392,7 @@ export default function SkillsComponent() {
 
         </div>
         
-        <span className={`${styles.skillsCategoryTtitle}`}>
+        <span className={`${styles.skillsCategoryTitle}`}>
           Others
         </span>
         <div className={`${styles.etcSkillsDiv}`}>

@@ -13,15 +13,15 @@ export default function AboutComponent() {
         </div>
       </div>
 
-      <div className={`${styles.body}`}>
+      <div className={`${styles.body} flex-col`}>
         <span>
           Hello, I&#39;m Sunyoung Ahn &#40;aka. Sunny&#41;, a 23-year-old Frontend Developer.<br/>
           I hold a bachelor&#39;s degree in Software Engineering and I am currently pursuing my master&#39;s degree in Computer Science.
         </span>
       </div>
 
-      <div className={`${styles.visionDiv}`}>
-        <div className={`${styles.visionIconDiv} visionIconDivAni`}>
+      <div className={`${styles.visionDiv} contents-gap`}>
+        <div className={`${styles.visionIconDiv} flex-col visionIconDivAni`}>
           <div className={`${styles.visionIcon} ${styles.embraceColor}`}>
             <img src="/embrace_logo.png" alt="Embrace Logo" />
           </div>
@@ -29,7 +29,7 @@ export default function AboutComponent() {
             <span>Embrace</span>
           </div>
         </div>
-        <div className={`${styles.visionIconDiv} visionIconDivAni`}>
+        <div className={`${styles.visionIconDiv} flex-col visionIconDivAni contents-gap`}>
           <div className={`${styles.visionIcon} ${styles.directColor}`}>
             <img src="/direct_logo.png" alt="Direct Logo" />
           </div>
@@ -37,7 +37,7 @@ export default function AboutComponent() {
             <span>Direct</span>
           </div>
         </div>
-        <div className={`${styles.visionIconDiv} visionIconDivAni`}>
+        <div className={`${styles.visionIconDiv} flex-col visionIconDivAni contents-gap`}>
           <div className={`${styles.visionIcon} ${styles.impactColor}`}>
             <img src="/impact_logo.png" alt="Impact Logo" />
           </div>
@@ -47,7 +47,7 @@ export default function AboutComponent() {
         </div>
       </div>
 
-      <div className={`${styles.body}`}>
+      <div className={`${styles.body} flex-col`}>
         <span>
           My key values are <span className={`${styles.highlightUnderline}`}><b>embrace</b>, <b>direct</b>, and <b>impact</b></span>. 
           I constantly strive to embrace diverse knowledge, directly reach goals, 

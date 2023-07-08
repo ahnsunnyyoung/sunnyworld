@@ -85,19 +85,19 @@ export default function ProjectsComponent() {
         </div>
       </div>
 
-      <div className={`${styles.cardViewDiv}`}>
+      <div className={`${styles.cardViewDiv} color-white`}>
         {data.map((item, index) =>
           <div className={`${styles.cardView}`} key={index} style={{"width":item.width}}>
-            <div className={`${styles.cardHeader}`}>
+            <div className={`cardHeader`}>
               <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
-              <div className={`${styles.cardTitleDiv}`}>
+              <div className={`cardTitleDiv flex-col`}>
                 <span className={`${styles.title}`}>{item.title}</span>
                 <span className={`${styles.period}`}>{item.period}</span>
                 <span className={`${styles.subtitle}`}>{item.subtitle}</span>
               </div>
             </div>
-            <span className={`${styles.summary}`}>{item.summary}</span>
-            <div className={`${styles.contents}`}>
+            <span className={`${styles.cardBody}`}>{item.summary}</span>
+            <div className={`${styles.cardBody}`}>
               <ul>
                 {item.contents.map((content, i) =>
                   <li key={i}>{content}</li>
@@ -105,7 +105,7 @@ export default function ProjectsComponent() {
               </ul>
             </div>
             {("tech" in item) &&
-              <div className={`${styles.tech}`}>
+              <div className={`${styles.cardBody}`}>
                 <b>Tech</b> <br/>
                 {item.tech}
               </div>

@@ -43,12 +43,12 @@ export default function EducationComponent() {
         </div>
       </div>
 
-      <div className={`${styles.cardViewDiv}`}>
+      <div className={`${styles.cardViewDiv} color-white`}>
         {data.map((item, index) =>
           <div className={`${styles.cardView}`} key={index} style={{"width":item.width}}>
-            <div className={`${styles.cardHeader}`}>
+            <div className={`cardHeader`}>
               <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
-              <div className={`${styles.cardTitleDiv}`}>
+              <div className={`cardTitleDiv flex-col`}>
                 <span className={`${styles.title}`}>{item.title}</span>
                 <span className={`${styles.subtitle}`}>{item.subtitle}</span>
               </div>

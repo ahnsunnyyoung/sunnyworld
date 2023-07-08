@@ -54,7 +54,7 @@ export default function EndSection() {
 
       <span className={`${styles.mainPosition}`}>Frontend Developer</span>
       <span className={`${styles.mainTitle}`}>Do you want some Sunshine?</span>
-      <div className={`${styles.contacts}`}>
+      <div className={`${styles.contacts} color-white`}>
         {data.map((item, index) =>
           <a className={`${styles.contactDiv}`} href={item.url} key={index}>
             <div className={`${styles.icon}`}>{item.icon}</div>

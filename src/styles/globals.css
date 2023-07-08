@@ -16,6 +16,7 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none; 
+  align-items: center;
 }
 
 :root {
@@ -64,9 +65,11 @@ body {
   --padding-fullscreen-section-ver: 0.7rem;
   --padding-fullscreen-section-hor: 0.7rem;
   --padding-contents-section-ver: 5%;
-  --padding-contents-section-hor: 10%;
+  --padding-contents-section-hor: 15%;
   --padding-contents-section-ver-mb: 3rem;
   --padding-contents-section-hor-mb: 2rem;
+  --padding-card-title-div-ver: 0rem;
+  --padding-card-title-div-hor: 1rem;
 
   --diameter-vision-icon: 11.25rem;
   --diameter-vision-icon-mb: 8rem;
@@ -79,7 +82,7 @@ body {
 
   --gap-sections: 20rem;
   --gap-contents: 3rem;
-  --gap-contents-mb: 2rem;
+  --gap-contents-mb: 1rem;
   --gap-card-view: 1rem;
   --gap-card-contents: 1rem;
   --gap-card-header: 0.8rem;
@@ -87,6 +90,7 @@ body {
   --gap-contacts-mb: 1rem;
   --gap-etcSkillsIcon: 0.8rem;
   --gap-contents-section: 10rem;
+  --gap-card-title-div: 0.5rem;
 
   --min-width-card-view: 22rem;
   
@@ -120,6 +124,11 @@ b {
   background: inherit;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .main-container{
   width: 100%;
   height: 100vh;
@@ -129,7 +138,6 @@ b {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: var(--padding-fullscreen-section-ver) var(--padding-fullscreen-section-hor);
   gap: 16px;
   min-height: 100vh;
@@ -139,7 +147,6 @@ b {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 #contentsSection {
@@ -187,6 +194,22 @@ b {
   flex-grow: 0;
 }
 
+
+.cardTitleDiv {
+  justify-content: center;
+  align-items: flex-start;
+  padding: var(--padding-card-title-div-ver) var(--padding-card-title-div-ver);
+  gap: var(--gap-card-title-div);
+  align-self: stretch;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  gap: var(--gap-card-header);
+}
+
 .highlightUnderline {
   text-decoration-line: underline;
   text-decoration-style: wavy;
@@ -197,10 +220,15 @@ b {
   gap: var(--gap-contents);
 }
 
+.color-white {
+  color: #FFFFFF;
+}
+
 #endSection {
   /* attached background to be overlayed */
   background: linear-gradient(116.54deg, #EAEAF1 0.41%, #F1C0C0 23.23%, #F1F1C0 66.8%, #C3F5BA 100%);
   background-attachment: fixed; 
+  align-items: center;
 }
 
 /* Animation for gsap */

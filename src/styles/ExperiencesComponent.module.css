@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
   padding: 0px;
   gap: var(--gap-contents);
 }
@@ -23,31 +22,11 @@
   min-width: var(--min-width-card-view);
 }
 
-.cardHeader {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 10px;
-}
-
-.cardTitleDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0px 15px;
-  gap: 5px;
-}
-
 .title {
   font-weight: 600;
   font-size: var(--fs-cardTitle);
   line-height: var(--line-height-cardTitle);
   display: flex;
-  align-items: center;
-  
-  color: #FFFFFF;
 }
 
 .subtitle {
@@ -55,9 +34,6 @@
   font-size: var(--fs-cardSubtitle);
   line-height: var(--line-height-cardSubtitle);
   display: flex;
-  align-items: center;
-
-  color: #FFFFFF;
 }
 
 .cardIcon {
@@ -69,24 +45,15 @@
   font-size: var(--fs-cardBody);
   line-height: var(--line-height-cardBody);
   display: flex;
-  align-items: center;
-  
-  color: #FFFFFF;
 }
 
 .contents {
   font-size: var(--fs-cardBody);
   line-height: var(--line-height-cardBody);
-  align-items: center;
-
-  color: #FFFFFF;
 }
 
 .tech {
   font-size: var(--fs-cardBody);
-  align-items: center;
-
-  color: #FFFFFF;
 }
 
 .more {
@@ -96,9 +63,12 @@
   line-height: var(--line-height-cardSubtitle);
   
   display: flex;
-  align-items: center;
-  
-  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 1074px) {
+  .cardView {
+    max-width: var(--min-width-card-view);
+  }
 }
 
 @media only screen and (max-width: 480px) {
