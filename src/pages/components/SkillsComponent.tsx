@@ -1,13 +1,21 @@
 import styles from "@/styles/SkillsComponent.module.css"
+import SkillCardStack from './SkillCardStack';
+import { etc_idx, Skill } from "./types"
+
+const skillCardViews = (data:Array<Array<Skill>>) => {
+
+  let result: JSX.Element[] = [];
+  for(let i = 0; i<data.length; i++){
+    result.push(
+      <SkillCardStack data={data[i]}/>
+    )
+  }
+  return result;
+}
 
 export default function SkillsComponent() {
-  const lang_idx = 0;
-  const front_idx = 1;
-  const back_idx = 2;
-  const others_idx = 3;
-  const etc_idx = 4;
 
-  const data = [
+  const data: Array<Array<Skill>> = [
     // lang
     [
       {
@@ -288,118 +296,9 @@ export default function SkillsComponent() {
       <div className={`${styles.skillsContentsDiv} contents-gap`}>
 
         <div className={`${styles.mainSkillsDiv}`}>
-
-          <div className={`${styles.twoColDiv}`}>
-            <div className={`${styles.oneColDiv}`}>
-              <span className={`${styles.skillsCategoryTitle}`}>
-                Language
-              </span>
-              <div className={`${styles.cardViewDiv} color-white`}>
-                {data[lang_idx].map((item, index) =>
-                  ("period" in item)&&
-                    <div className={`${styles.cardView}`} key={index}>
-                      <div className={`cardHeader`}>
-                        <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
-                        <div className={`cardTitleDiv flex-col`}>
-                          <span className={`${styles.title}`}>{item.title}</span>
-                          <span className={`${styles.period}`}>{item.period} years</span>
-                        </div>
-                      </div>
-                      <div className={`${styles.SkillBar}`}>
-                        <div className={`${styles.SkillPer} Skill-${item.percent}`}>
-                        </div>
-                      </div>
-                    </div>
-                )}
-              </div>
-            </div>
-
-            <div className={`${styles.oneColDiv}`}>
-              <span className={`${styles.skillsCategoryTitle}`}>
-                Frontend
-              </span>
-              <div className={`${styles.cardViewDiv} color-white`}>
-                {data[front_idx].map((item, index) =>
-                  ("period" in item)&&
-                    <div className={`${styles.cardView}`} key={index}>
-                      <div className={`cardHeader`}>
-                        <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
-                        <div className={`cardTitleDiv flex-col`}>
-                          <span className={`${styles.title}`}>{item.title}</span>
-                          <span className={`${styles.period}`}>{item.period} years</span>
-                        </div>
-                      </div>
-                      <div className={`${styles.SkillBar}`}>
-                        <div className={`${styles.SkillPer} Skill-${item.percent}`}>
-                        </div>
-                      </div>
-                    </div>
-                )}
-              </div>
-            </div>
-          </div>
-
-          <div className={`${styles.twoColDiv}`}>
-            <div className={`${styles.oneColDiv}`}>
-              <span className={`${styles.skillsCategoryTitle}`}>
-                Backend
-              </span>
-              <div className={`${styles.cardViewDiv} color-white`}>
-                {data[back_idx].map((item, index) =>
-                  ("period" in item)&&
-                    <div className={`${styles.cardView}`} key={index}>
-                      <div className={`cardHeader`}>
-                        <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
-                        <div className={`cardTitleDiv flex-col`}>
-                          <span className={`${styles.title}`}>{item.title}</span>
-                          <span className={`${styles.period}`}>{item.period} years</span>
-                        </div>
-                      </div>
-                      <div className={`${styles.SkillBar}`}>
-                        <div className={`${styles.SkillPer} Skill-${item.percent}`}>
-                        </div>
-                      </div>
-                    </div>
-                )}
-              </div>
-            </div>
-
-            <div className={`${styles.oneColDiv}`}>
-              <span className={`${styles.skillsCategoryTitle}`}>
-                Others
-              </span>
-              <div className={`${styles.cardViewDiv} color-white`}>
-                {data[others_idx].map((item, index) =>
-                  ("period" in item)&&
-                    <div className={`${styles.cardView}`} key={index}>
-                      <div className={`cardHeader`}>
-                        <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
-                        <div className={`cardTitleDiv flex-col`}>
-                          <span className={`${styles.title}`}>{item.title}</span>
-                          <span className={`${styles.period}`}>{item.period} years</span>
-                        </div>
-                      </div>
-                      <div className={`${styles.SkillBar}`}>
-                        <div className={`${styles.SkillPer} Skill-${item.percent}`}>
-                        </div>
-                      </div>
-                    </div>
-                )}
-              </div>
-            </div>
-          </div>
-
-
+          {skillCardViews(data)}
         </div>
         
-        <span className={`${styles.skillsCategoryTitle}`}>
-          Others
-        </span>
-        <div className={`${styles.etcSkillsDiv}`}>
-          {data[etc_idx].map((item, index) =>
-            <img className={`${styles.etcSkillsIcon} etcSkillsIconAni`} key={index} src={item.img} alt={item.img_alt}/>
-          )}
-        </div>
       </div>
     </div>
   )

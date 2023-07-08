@@ -1,0 +1,47 @@
+.visionIconDiv {
+  justify-content: center;
+  padding: 0px;
+}
+
+.visionIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px;
+  gap: 5px;
+  width: var(--diameter-vision-icon);
+  height: var(--diameter-vision-icon);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+}
+
+
+.visionIconImg {
+  width: 100%;
+  height: 100%;
+}
+
+.embraceColor {
+  background: #F1F1C0;
+}
+
+.directColor {
+  background: #F1C0C0;
+}
+
+.impactColor {
+  background: #C3F5BA;
+}
+
+.title {
+  font-weight: 600;
+  font-size: var(--fs-visionTitle);
+  text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .visionIcon {
+    width: var(--diameter-vision-icon-mb);
+    height: var(--diameter-vision-icon-mb);
+  }
+}

@@ -1,0 +1,38 @@
+.skillCardStack {
+  gap: 1rem;
+  display: flex;
+  flex: auto;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skillsCategoryTitle  {
+  text-align: center;
+  font-size: var(--fs-skillsTitle);
+  font-weight: 400;
+}
+
+.cardViewDiv {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap-card-view);
+}
+
+.etcSkillsDiv {
+  width: 100%;
+}
+
+.etcSkillsIconsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-etcSkillsIcon);
+}
+
+.etcSkillsIcon {
+  width: var(--diameter-skills-icon);
+  height: var(--diameter-skills-icon);
+}

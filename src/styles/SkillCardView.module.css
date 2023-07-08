@@ -1,0 +1,54 @@
+
+.cardView {
+  display: flex;
+  padding: var(--padding-card-view-ver) var(--padding-card-view-hor);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-card-contents);
+  width: 100%;
+  border-radius: var(--radius-border-icon);
+  background: rgba(0, 0, 0, 0.20);
+}
+.cardIcon {
+  width: var(--diameter-skills-icon);
+  height: var(--diameter-skills-icon);
+}
+
+.title {
+  font-size: var(--fs-skills-cardTitle);
+  font-weight: 700;
+  width: min-content;
+}
+
+.period {
+  font-size: var(--fs-cardSubtitle);
+  font-weight: 600;
+}
+
+.period {
+  font-size: var(--fs-cardBody);
+  line-height: var(--line-height-cardBody);
+  display: flex;
+}
+
+.SkillBar {
+  width:100%;
+  height: var(--height-skill-bar);
+  position: relative;
+  background: white;
+  border-radius: var(--radius-skill-bar);
+}
+
+.SkillPer {
+  height: var(--height-skill-bar);
+  position: absolute;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-skill-bar);
+}
+
+@media only screen and (max-width: 480px) {
+  .cardIcon {
+    width: var(--diameter-skills-icon-mb);
+    height: var(--diameter-skills-icon-mb);
+  }
+}

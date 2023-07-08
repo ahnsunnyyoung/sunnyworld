@@ -1,6 +1,25 @@
 import styles from "@/styles/AboutComponent.module.css"
+import AboutVisionIcon from './AboutVisionIcon';
 
 export default function AboutComponent() {
+
+  const data = [
+    {
+      "title": "Embrace",
+      "color": "#F1F1C0",
+      "logo": "/embrace_logo.png",
+    },
+    {
+      "title": "Direct",
+      "color": "#F1C0C0",
+      "logo": "/direct_logo.png",
+    },
+    {
+      "title": "Impact",
+      "color": "#C3F5BA",
+      "logo": "/impact_logo.png",
+    },
+  ]
 
   return (
     <div className={`component-layout contents-gap`} id="aboutComponent">
@@ -21,37 +40,16 @@ export default function AboutComponent() {
       </div>
 
       <div className={`${styles.visionDiv} contents-gap`}>
-        <div className={`${styles.visionIconDiv} flex-col visionIconDivAni`}>
-          <div className={`${styles.visionIcon} ${styles.embraceColor}`}>
-            <img src="/embrace_logo.png" alt="Embrace Logo" />
-          </div>
-          <div className={`${styles.title}`}>
-            <span>Embrace</span>
-          </div>
-        </div>
-        <div className={`${styles.visionIconDiv} flex-col visionIconDivAni contents-gap`}>
-          <div className={`${styles.visionIcon} ${styles.directColor}`}>
-            <img src="/direct_logo.png" alt="Direct Logo" />
-          </div>
-          <div className={`${styles.title}`}>
-            <span>Direct</span>
-          </div>
-        </div>
-        <div className={`${styles.visionIconDiv} flex-col visionIconDivAni contents-gap`}>
-          <div className={`${styles.visionIcon} ${styles.impactColor}`}>
-            <img src="/impact_logo.png" alt="Impact Logo" />
-          </div>
-          <div className={`${styles.title}`}>
-            <span>Impact</span>
-          </div>
-        </div>
+        {data.map((icon, index) =>
+          <AboutVisionIcon icon={icon} key={index}/>
+        )}
       </div>
 
       <div className={`${styles.body} flex-col`}>
         <span>
-          My key values are <span className={`${styles.highlightUnderline}`}><b>embrace</b>, <b>direct</b>, and <b>impact</b></span>. 
+          My key values are <span className={`highlightUnderline`}><b>embrace</b>, <b>direct</b>, and <b>impact</b></span>. 
           I constantly strive to embrace diverse knowledge, directly reach goals, 
-          and make a positive impact on the environment, much like the radiance of <span className={`${styles.highlightUnderline}`}><b>sunshine</b></span>. 
+          and make a positive impact on the environment, much like the radiance of <span className={`highlightUnderline`}><b>sunshine</b></span>. 
           I am fully prepared to bring my potential to the team, the organization, 
           and its products as a whole.
         </span>
