@@ -1,3 +1,4 @@
+import styles from "@/styles/SkillsComponent.module.css"
 
 export default function SkillsComponent() {
   const lang_idx = 0;
@@ -273,7 +274,7 @@ export default function SkillsComponent() {
   ];
 
   return (
-    <div id='skillsComponent' className="contents-gap">
+    <div id='skillsComponent' className={`component-layout contents-gap`}>
 
       <div className='componentTitle'>
         <div className='title'>
@@ -284,28 +285,28 @@ export default function SkillsComponent() {
         </div>
       </div>
 
-      <div id="skillsContentsDiv">
+      <div className={`${styles.skillsContentsDiv}`}>
 
-        <div id="mainSkillsDiv">
+        <div className={`${styles.mainSkillsDiv}`}>
 
-          <div className="twoColDiv">
-            <div className="oneColDiv">
-              <span className="title">
+          <div className={`${styles.twoColDiv}`}>
+            <div className={`${styles.oneColDiv}`}>
+              <span className={`${styles.title}`}>
                 Language
               </span>
-              <div className="cardViewDiv">
+              <div className={`${styles.cardViewDiv}`}>
                 {data[lang_idx].map((item, index) =>
                   ("period" in item)&&
-                    <div className="cardView" key={index}>
-                      <div className="cardHeader">
-                        <img className="cardIcon" src={item.img} alt={item.img_alt}/>
-                        <div className="cardTitleDiv">
-                          <span className="title">{item.title}</span>
-                          <span className="period">{item.period} years</span>
+                    <div className={`${styles.cardView}`} key={index}>
+                      <div className={`${styles.cardHeader}`}>
+                        <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
+                        <div className={`${styles.cardTitleDiv}`}>
+                          <span className={`${styles.title}`}>{item.title}</span>
+                          <span className={`${styles.period}`}>{item.period} years</span>
                         </div>
                       </div>
-                      <div className="SkillBar">
-                        <div className={"SkillPer Skill-"+item.percent}>
+                      <div className={`${styles.SkillBar}`}>
+                        <div className={`${styles.SkillPer} Skill-${item.percent}`}>
                         </div>
                       </div>
                     </div>
@@ -313,23 +314,23 @@ export default function SkillsComponent() {
               </div>
             </div>
 
-            <div className="oneColDiv">
-              <span className="title">
+            <div className={`${styles.oneColDiv}`}>
+              <span className={`${styles.title}`}>
                 Frontend
               </span>
-              <div className="cardViewDiv">
+              <div className={`${styles.cardViewDiv}`}>
                 {data[front_idx].map((item, index) =>
                   ("period" in item)&&
-                    <div className="cardView" key={index}>
-                      <div className="cardHeader">
-                        <img className="cardIcon" src={item.img} alt={item.img_alt}/>
-                        <div className="cardTitleDiv">
-                          <span className="title">{item.title}</span>
-                          <span className="period">{item.period} years</span>
+                    <div className={`${styles.cardView}`} key={index}>
+                      <div className={`${styles.cardHeader}`}>
+                        <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
+                        <div className={`${styles.cardTitleDiv}`}>
+                          <span className={`${styles.title}`}>{item.title}</span>
+                          <span className={`${styles.period}`}>{item.period} years</span>
                         </div>
                       </div>
-                      <div className="SkillBar">
-                        <div className={"SkillPer Skill-"+item.percent}>
+                      <div className={`${styles.SkillBar}`}>
+                        <div className={`${styles.SkillPer} Skill-${item.percent}`}>
                         </div>
                       </div>
                     </div>
@@ -338,24 +339,24 @@ export default function SkillsComponent() {
             </div>
           </div>
 
-          <div className="twoColDiv">
-            <div className="oneColDiv">
-              <span className="title">
+          <div className={`${styles.twoColDiv}`}>
+            <div className={`${styles.oneColDiv}`}>
+              <span className={`${styles.title}`}>
                 Backend
               </span>
-              <div className="cardViewDiv">
+              <div className={`${styles.cardViewDiv}`}>
                 {data[back_idx].map((item, index) =>
                   ("period" in item)&&
-                    <div className="cardView" key={index}>
-                      <div className="cardHeader">
-                        <img className="cardIcon" src={item.img} alt={item.img_alt}/>
-                        <div className="cardTitleDiv">
-                          <span className="title">{item.title}</span>
-                          <span className="period">{item.period} years</span>
+                    <div className={`${styles.cardView}`} key={index}>
+                      <div className={`${styles.cardHeader}`}>
+                        <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
+                        <div className={`${styles.cardTitleDiv}`}>
+                          <span className={`${styles.title}`}>{item.title}</span>
+                          <span className={`${styles.period}`}>{item.period} years</span>
                         </div>
                       </div>
-                      <div className="SkillBar">
-                        <div className={"SkillPer Skill-"+item.percent}>
+                      <div className={`${styles.SkillBar}`}>
+                        <div className={`${styles.SkillPer} Skill-${item.percent}`}>
                         </div>
                       </div>
                     </div>
@@ -363,23 +364,23 @@ export default function SkillsComponent() {
               </div>
             </div>
 
-            <div className="oneColDiv">
-              <span className="title">
+            <div className={`${styles.oneColDiv}`}>
+              <span className={`${styles.title}`}>
                 Others
               </span>
-              <div className="cardViewDiv">
+              <div className={`${styles.cardViewDiv}`}>
                 {data[others_idx].map((item, index) =>
                   ("period" in item)&&
-                    <div className="cardView" key={index}>
-                      <div className="cardHeader">
-                        <img className="cardIcon" src={item.img} alt={item.img_alt}/>
-                        <div className="cardTitleDiv">
-                          <span className="title">{item.title}</span>
-                          <span className="period">{item.period} years</span>
+                    <div className={`${styles.cardView}`} key={index}>
+                      <div className={`${styles.cardHeader}`}>
+                        <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
+                        <div className={`${styles.cardTitleDiv}`}>
+                          <span className={`${styles.title}`}>{item.title}</span>
+                          <span className={`${styles.period}`}>{item.period} years</span>
                         </div>
                       </div>
-                      <div className="SkillBar">
-                        <div className={"SkillPer Skill-"+item.percent}>
+                      <div className={`${styles.SkillBar}`}>
+                        <div className={`${styles.SkillPer} Skill-${item.percent}`}>
                         </div>
                       </div>
                     </div>
@@ -391,20 +392,15 @@ export default function SkillsComponent() {
 
         </div>
         
-        <span className="title">
+        <span className={`${styles.title}`}>
           Others
         </span>
-        <div id="etcSkillsDiv">
+        <div className={`${styles.etcSkillsDiv}`}>
           {data[etc_idx].map((item, index) =>
-            <img className="etcSkillsIcon" key={index} src={item.img} alt={item.img_alt}/>
+            <img className={`${styles.etcSkillsIcon} etcSkillsIconAni`} key={index} src={item.img} alt={item.img_alt}/>
           )}
         </div>
       </div>
-
-
-      {/* <div id="skillsWordCloud">
-        <img src="/wordcloud.png" alt="Wordcloud of skills"/>
-      </div> */}
     </div>
   )
 }
