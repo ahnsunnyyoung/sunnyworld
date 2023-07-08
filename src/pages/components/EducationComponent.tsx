@@ -1,3 +1,4 @@
+import styles from "@/styles/EducationComponent.module.css"
 
 export default function EducationComponent() {
 
@@ -32,28 +33,28 @@ export default function EducationComponent() {
   ]
 
   return (
-    <div id='educationComponent' className="contents-gap">
-      <div className='componentTitle'>
-        <div className='title'>
+    <div id='educationComponent' className={`component-layout contents-gap`}>
+      <div className={`componentTitle`}>
+        <div className={`title`}>
           Education
         </div>
-        <div className='subtitle'>
+        <div className={`subtitle`}>
           My solid foundation went through this journey
         </div>
       </div>
 
-      <div id="cardViewDiv">
+      <div className={`${styles.cardViewDiv}`}>
         {data.map((item, index) =>
-          <div className="cardView" key={index} style={{"width":item.width}}>
-            <div className="cardHeader">
-              <img className="cardIcon" src={item.img} alt={item.img_alt}/>
-              <div className="cardTitleDiv">
-                <span className="title">{item.title}</span>
-                <span className="subtitle">{item.subtitle}</span>
+          <div className={`${styles.cardView}`} key={index} style={{"width":item.width}}>
+            <div className={`${styles.cardHeader}`}>
+              <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
+              <div className={`${styles.cardTitleDiv}`}>
+                <span className={`${styles.title}`}>{item.title}</span>
+                <span className={`${styles.subtitle}`}>{item.subtitle}</span>
               </div>
             </div>
-            <span className="period">{item.period}</span>
-            <span className="contents">{item.contents}</span>
+            <span className={`${styles.period}`}>{item.period}</span>
+            <span className={`${styles.contents}`}>{item.contents}</span>
           </div>
         )}
       </div>

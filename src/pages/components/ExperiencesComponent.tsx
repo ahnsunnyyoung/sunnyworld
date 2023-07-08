@@ -1,3 +1,5 @@
+import styles from "@/styles/ExperiencesComponent.module.css"
+
 export default function ExperiencesComponent() {
   const data = [
     {
@@ -54,28 +56,28 @@ export default function ExperiencesComponent() {
   ]
 
   return (
-    <div id='experiencesComponent' className="contents-gap">
-      <div className='componentTitle'>
-        <div className='title'>
+    <div id='experiencesComponent' className={`component-layout contents-gap`}>
+      <div className={`componentTitle`}>
+        <div className={`title`}>
           Experiences
         </div>
-        <div className='subtitle'>
+        <div className={`subtitle`}>
           Never stop challenging, Never stop Trying.
         </div>
       </div>
 
-      <div id="cardViewDiv">
+      <div className={`${styles.cardViewDiv}`}>
         {data.map((item, index) =>
-          <div className="cardView" key={index} style={{"width":item.width}}>
-            <div className="cardHeader">
-              <img className="cardIcon" src={item.img} alt={item.img_alt}/>
-              <div className="cardTitleDiv">
-                <span className="title">{item.title}</span>
-                <span className="subtitle">{item.subtitle}</span>
+          <div className={`${styles.cardView}`} key={index} style={{"width":item.width}}>
+            <div className={`${styles.cardHeader}`}>
+              <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
+              <div className={`${styles.cardTitleDiv}`}>
+                <span className={`${styles.title}`}>{item.title}</span>
+                <span className={`${styles.subtitle}`}>{item.subtitle}</span>
               </div>
             </div>
-            <span className="period">{item.period}</span>
-            <div className="contents">
+            <span className={`${styles.period}`}>{item.period}</span>
+            <div className={`${styles.contents}`}>
               <ul>
                 {item.contents.map((content, i) =>
                   <li key={i}>{content}</li>
@@ -83,13 +85,13 @@ export default function ExperiencesComponent() {
               </ul>
             </div>
             {("tech" in item) &&
-              <div className="tech">
+              <div className={`${styles.tech}`}>
                 <b>Tech</b> <br/>
                 {item.tech}
               </div>
             }
             {("moreLink" in item) &&
-              <a className="more" href={item.moreLink} target="_blank">
+              <a className={`${styles.more}`} href={item.moreLink} target="_blank">
                 See more &#62;
               </a>
             }

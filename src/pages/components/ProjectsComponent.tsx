@@ -1,3 +1,4 @@
+import styles from "@/styles/ProjectsComponent.module.css"
 
 export default function ProjectsComponent() {
   const data = [
@@ -74,29 +75,29 @@ export default function ProjectsComponent() {
   ]
 
   return (
-    <div id='projectsComponent' className="contents-gap">
-      <div className='componentTitle'>
-        <div className='title'>
+    <div id='projectsComponent' className={`component-layout contents-gap`}>
+      <div className={`componentTitle`}>
+        <div className={`title`}>
           Projects
         </div>
-        <div className='subtitle'>
+        <div className={`subtitle`}>
           Go for it, and I went for this.
         </div>
       </div>
 
-      <div id="cardViewDiv">
+      <div className={`${styles.cardViewDiv}`}>
         {data.map((item, index) =>
-          <div className="cardView" key={index} style={{"width":item.width}}>
-            <div className="cardHeader">
-              <img className="cardIcon" src={item.img} alt={item.img_alt}/>
-              <div className="cardTitleDiv">
-                <span className="title">{item.title}</span>
-                <span className="period">{item.period}</span>
-                <span className="subtitle">{item.subtitle}</span>
+          <div className={`${styles.cardView}`} key={index} style={{"width":item.width}}>
+            <div className={`${styles.cardHeader}`}>
+              <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
+              <div className={`${styles.cardTitleDiv}`}>
+                <span className={`${styles.title}`}>{item.title}</span>
+                <span className={`${styles.period}`}>{item.period}</span>
+                <span className={`${styles.subtitle}`}>{item.subtitle}</span>
               </div>
             </div>
-            <span className="summary">{item.summary}</span>
-            <div className="contents">
+            <span className={`${styles.summary}`}>{item.summary}</span>
+            <div className={`${styles.contents}`}>
               <ul>
                 {item.contents.map((content, i) =>
                   <li key={i}>{content}</li>
@@ -104,13 +105,13 @@ export default function ProjectsComponent() {
               </ul>
             </div>
             {("tech" in item) &&
-              <div className="tech">
+              <div className={`${styles.tech}`}>
                 <b>Tech</b> <br/>
                 {item.tech}
               </div>
             }
             {("moreLink" in item) &&
-              <a className="more" href={item.moreLink} target="_blank">
+              <a className={`${styles.more}`} href={item.moreLink} target="_blank">
                 See more &#62;
               </a>
             }

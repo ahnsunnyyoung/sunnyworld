@@ -64,3 +64,10 @@
   align-items: center;
   text-align: center;
 }
+
+@media only screen and (max-width: 480px) {
+  .visionIcon {
+    width: var(--diameter-vision-icon-mb);
+    height: var(--diameter-vision-icon-mb);
+  }
+}

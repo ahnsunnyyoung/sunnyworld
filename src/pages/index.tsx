@@ -80,7 +80,7 @@ export default function Home() {
       });
     });
 
-    gsap.to(".etcSkillsIcon", {
+    gsap.to(".etcSkillsIconAni", {
       duration: 2,
       opacity: 1, 
       stagger: 0.2,
@@ -88,7 +88,7 @@ export default function Home() {
       ease: "elastic", 
       force3D: true,
       scrollTrigger: {
-        trigger: ".etcSkillsIcon",
+        trigger: ".etcSkillsIconAni",
         toggleActions: "restart",
       },
     });

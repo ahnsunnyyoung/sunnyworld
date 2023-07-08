@@ -1,0 +1,118 @@
+
+.cardViewDiv {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0px;
+  gap: var(--gap-contents);
+}
+
+.cardView {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-card-view-ver) var(--padding-card-view-hor);
+  gap: var(--gap-card-view);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-card-view);  
+  align-self: stretch;
+  font-weight: 100;
+  width:100%;
+  min-width: var(--min-width-card-view);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+}
+
+.cardTitleDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 15px;
+  gap: 5px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: var(--fs-cardTitle);
+  line-height: var(--line-height-cardTitle);
+  display: flex;
+  align-items: center;
+  
+  color: #FFFFFF;
+}
+
+.period {
+  font-size: var(--fs-cardBody);
+  line-height: var(--line-height-cardBody);
+  display: flex;
+  align-items: center;
+
+  color: #FFFFFF;
+}
+
+.subtitle {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-size: var(--fs-cardSubtitle);
+  line-height: var(--line-height-cardSubtitle);
+
+  color: #FFFFFF;
+  
+  display: flex;
+  align-items: center;
+}
+
+.cardIcon {
+  width: 70px;
+  height: 70px;
+}
+
+.summary {
+  font-size: var(--fs-cardBody);
+  line-height: var(--line-height-cardBody);
+  display: flex;
+  align-items: center;
+  
+  color: #FFFFFF;
+}
+
+.contents {
+  font-size: var(--fs-cardBody);
+  line-height: var(--line-height-cardBody);
+  align-items: center;
+
+  color: #FFFFFF;
+}
+
+.tech {
+  font-size: var(--fs-cardBody);
+  align-items: center;
+
+  color: #FFFFFF;
+}
+
+.more {
+  font-style: italic;
+  font-weight: 300;
+  font-size: var(--fs-cardSubtitle);
+  line-height: var(--line-height-cardSubtitle);
+  
+  display: flex;
+  align-items: center;
+  
+  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 480px) {
+}

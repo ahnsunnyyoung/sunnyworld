@@ -291,7 +291,7 @@ export default function SkillsComponent() {
 
           <div className={`${styles.twoColDiv}`}>
             <div className={`${styles.oneColDiv}`}>
-              <span className={`${styles.title}`}>
+              <span className={`${styles.skillsCategoryTtitle}`}>
                 Language
               </span>
               <div className={`${styles.cardViewDiv}`}>
@@ -315,7 +315,7 @@ export default function SkillsComponent() {
             </div>
 
             <div className={`${styles.oneColDiv}`}>
-              <span className={`${styles.title}`}>
+              <span className={`${styles.skillsCategoryTtitle}`}>
                 Frontend
               </span>
               <div className={`${styles.cardViewDiv}`}>
@@ -341,7 +341,7 @@ export default function SkillsComponent() {
 
           <div className={`${styles.twoColDiv}`}>
             <div className={`${styles.oneColDiv}`}>
-              <span className={`${styles.title}`}>
+              <span className={`${styles.skillsCategoryTtitle}`}>
                 Backend
               </span>
               <div className={`${styles.cardViewDiv}`}>
@@ -365,7 +365,7 @@ export default function SkillsComponent() {
             </div>
 
             <div className={`${styles.oneColDiv}`}>
-              <span className={`${styles.title}`}>
+              <span className={`${styles.skillsCategoryTtitle}`}>
                 Others
               </span>
               <div className={`${styles.cardViewDiv}`}>
@@ -392,7 +392,7 @@ export default function SkillsComponent() {
 
         </div>
         
-        <span className={`${styles.title}`}>
+        <span className={`${styles.skillsCategoryTtitle}`}>
           Others
         </span>
         <div className={`${styles.etcSkillsDiv}`}>

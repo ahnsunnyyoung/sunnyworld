@@ -1,3 +1,4 @@
+import styles from "@/styles/EndSection.module.css"
 import { BsLinkedin, BsGithub, BsTelegram, BsInstagram, BsYoutube, BsFillEnvelopeAtFill, BsFillArrowUpCircleFill } from 'react-icons/bs';
 
 export default function EndSection() {
@@ -40,24 +41,24 @@ export default function EndSection() {
   }
 
   return (
-    <section id='endSection'>
+    <section id='endSection' className={`fullscreen_section`}>
 
       {/* absolute background */}
-      <div id='shadowSunnyDiv' className='pulse'>
-        <span id='shadowSunny'>Sunny</span>
+      <div className={`${styles.shadowSunnyDiv} ${styles.pulse}`}>
+        <span className={`${styles.shadowSunny}`}>Sunny</span>
       </div>
 
-      <div id='scrollUpDiv'>
-        <span id='scrollUp' onClick={scrollTop}><BsFillArrowUpCircleFill size={'3rem'}/></span>
+      <div className={`${styles.scrollUpDiv}`}>
+        <span className={`${styles.scrollUp}`} onClick={scrollTop}><BsFillArrowUpCircleFill size={'3rem'}/></span>
       </div>
 
-      <span id='mainPosition'>Frontend Developer</span>
-      <span id='mainTitle'>Do you want some Sunshine?</span>
-      <div id='contacts'>
+      <span className={`${styles.mainPosition}`}>Frontend Developer</span>
+      <span className={`${styles.mainTitle}`}>Do you want some Sunshine?</span>
+      <div className={`${styles.contacts}`}>
         {data.map((item, index) =>
-          <a className="contactDiv" href={item.url} key={index}>
-            <div className="icon">{item.icon}</div>
-            <div className="title">{item.title}</div>
+          <a className={`${styles.contactDiv}`} href={item.url} key={index}>
+            <div className={`${styles.icon}`}>{item.icon}</div>
+            <div className={`${styles.title}`}>{item.title}</div>
           </a>
         )}
       </div>
