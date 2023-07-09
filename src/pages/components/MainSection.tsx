@@ -4,13 +4,11 @@ export default function MainSection() {
 
   return (
     <section id='mainSection' className={`fullscreen_section`}>
-
-      {/* absolute background */}
       <div className={`${styles.shadowSunnyDiv} shadowSunnyDivAni`}>
         <span className={`${styles.shadowSunny}`}>Sunny</span>
       </div>
       <div className={`${styles.lastupdateInfoDiv} color-white`}>
-        <span className={`${styles.lastupdateInfo}`}>Latest update 8/Jul/2023</span>
+        <span className={`${styles.lastupdateInfo}`}>Latest update 9/Jul/2023</span>
       </div>
 
       <span className={`${styles.mainPosition}`}>Frontend Developer</span>
