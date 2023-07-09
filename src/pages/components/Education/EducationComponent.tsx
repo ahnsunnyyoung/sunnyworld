@@ -1,4 +1,5 @@
 import styles from "./EducationComponent.module.css"
+import EducationCardView from "./EducationCardView"
 
 export default function EducationComponent() {
 
@@ -45,17 +46,7 @@ export default function EducationComponent() {
 
       <div className={`${styles.cardViewDiv} color-white`}>
         {data.map((item, index) =>
-          <div className={`${styles.cardView}`} key={index} style={{"width":item.width}}>
-            <div className={`cardHeader`}>
-              <img className={`${styles.cardIcon}`} src={item.img} alt={item.img_alt}/>
-              <div className={`cardTitleDiv flex-col`}>
-                <span className={`${styles.title}`}>{item.title}</span>
-                <span className={`${styles.subtitle}`}>{item.subtitle}</span>
-              </div>
-            </div>
-            <span className={`${styles.period}`}>{item.period}</span>
-            <span className={`${styles.contents}`}>{item.contents}</span>
-          </div>
+          <EducationCardView item={item} key={index}/>
         )}
       </div>
       
