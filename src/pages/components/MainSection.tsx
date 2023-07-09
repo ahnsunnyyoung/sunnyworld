@@ -1,4 +1,4 @@
-import styles from "@/styles/MainSection.module.css"
+import styles from "./MainSection.module.css"
 
 export default function MainSection() {
 

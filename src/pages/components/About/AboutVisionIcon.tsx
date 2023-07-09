@@ -1,5 +1,5 @@
-import styles from "@/styles/AboutVisionIcon.module.css"
-import { VisionIcon } from "./types"
+import styles from "./AboutVisionIcon.module.css"
+import VisionIcon from '@/types/VisionIcon'
 
 export default function AboutVisionIcon({ icon }: { icon: VisionIcon }) {
   return (

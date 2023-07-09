@@ -1,4 +1,4 @@
-import styles from "@/styles/EndSection.module.css"
+import styles from "./EndSection.module.css"
 import { BsLinkedin, BsGithub, BsTelegram, BsInstagram, BsYoutube, BsFillEnvelopeAtFill, BsFillArrowUpCircleFill } from 'react-icons/bs';
 
 export default function EndSection() {

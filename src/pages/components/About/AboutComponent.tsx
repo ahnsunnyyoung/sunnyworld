@@ -1,4 +1,4 @@
-import styles from "@/styles/AboutComponent.module.css"
+import styles from "./AboutComponent.module.css"
 import AboutVisionIcon from './AboutVisionIcon';
 
 export default function AboutComponent() {

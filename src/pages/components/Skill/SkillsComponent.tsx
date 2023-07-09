@@ -1,13 +1,13 @@
-import styles from "@/styles/SkillsComponent.module.css"
+import styles from "./SkillsComponent.module.css"
 import SkillCardStack from './SkillCardStack';
-import { etc_idx, Skill } from "./types"
+import Skill from '@/types/Skill'
 
 const skillCardViews = (data:Array<Array<Skill>>) => {
 
   let result: JSX.Element[] = [];
   for(let i = 0; i<data.length; i++){
     result.push(
-      <SkillCardStack data={data[i]}/>
+      <SkillCardStack data={data[i]} key={i}/>
     )
   }
   return result;

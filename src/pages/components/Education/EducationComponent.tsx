@@ -1,4 +1,4 @@
-import styles from "@/styles/EducationComponent.module.css"
+import styles from "./EducationComponent.module.css"
 
 export default function EducationComponent() {
 

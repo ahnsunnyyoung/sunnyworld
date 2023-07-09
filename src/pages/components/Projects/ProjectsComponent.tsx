@@ -1,4 +1,4 @@
-import styles from "@/styles/ProjectsComponent.module.css"
+import styles from "./ProjectsComponent.module.css"
 
 export default function ProjectsComponent() {
   const data = [

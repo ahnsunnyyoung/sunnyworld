@@ -1,4 +1,4 @@
-import styles from "@/styles/ExperiencesComponent.module.css"
+import styles from ".//ExperiencesComponent.module.css"
 
 export default function ExperiencesComponent() {
   const data = [

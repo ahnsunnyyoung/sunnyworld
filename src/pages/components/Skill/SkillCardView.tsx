@@ -1,5 +1,5 @@
-import styles from "@/styles/SkillCardView.module.css"
-import { Skill } from "./types"
+import styles from "./SkillCardView.module.css"
+import Skill from '@/types/Skill'
 
 export default function SkillsCardView({ item }: { item: Skill }) {
   return (
