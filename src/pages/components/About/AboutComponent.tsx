@@ -8,16 +8,19 @@ export default function AboutComponent() {
       "title": "Embrace",
       "color": "#F1F1C0",
       "logo": "/embrace_logo.png",
+      "logo_alt": "Embrace Logo",
     },
     {
       "title": "Direct",
       "color": "#F1C0C0",
       "logo": "/direct_logo.png",
+      "logo_alt": "Direct Logo",
     },
     {
       "title": "Impact",
       "color": "#C3F5BA",
       "logo": "/impact_logo.png",
+      "logo_alt": "Impact Logo",
     },
   ]
 

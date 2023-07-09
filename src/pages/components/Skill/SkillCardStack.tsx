@@ -3,6 +3,7 @@ import SkillCardView from './SkillCardView';
 import Skill from '@/types/Skill'
 
 export default function SkillsCardStack({ data }: { data: Array<Skill> }) {
+  if(data){
     if(data[0].category=="Etc"){
       return (
         <div className={`${styles.etcSkillsDiv}`}>
@@ -31,5 +32,7 @@ export default function SkillsCardStack({ data }: { data: Array<Skill> }) {
         </div>
       );
     }
-    
+  }else{
+    return(<div></div>)
+  }
 }
