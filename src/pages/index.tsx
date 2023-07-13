@@ -208,7 +208,6 @@ export default function Home() {
     <div className="main-container">
       <Head>
         <title>Sunny World</title>
-        <base href="/" />
       </Head>
       {/* <div className="cursor"></div> */}
       <MainSection/>

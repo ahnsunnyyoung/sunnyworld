@@ -8,7 +8,7 @@ export default function MainSection() {
         <span className={`${styles.shadowSunny}`}>Sunny</span>
       </div>
       <div className={`${styles.lastupdateInfoDiv} color-white`}>
-        <span className={`${styles.lastupdateInfo}`}>Latest update 9/Jul/2023</span>
+        <span className={`${styles.lastupdateInfo}`}>Latest update 13/Jul/2023</span>
       </div>
 
       <span className={`${styles.mainPosition}`}>Frontend Developer</span>
