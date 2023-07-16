@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Head from 'next/head'
 import MainSection from './components/MainSection';
 import ContentsSection from './components/ContentsSection';
+import Header from './components/Header';
 import EndSection from './components/EndSection';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -209,6 +210,7 @@ export default function Home() {
       <Head>
         <title>Sunny World</title>
       </Head>
+      <Header />
       {/* <div className="cursor"></div> */}
       <MainSection/>
       <ContentsSection/>
