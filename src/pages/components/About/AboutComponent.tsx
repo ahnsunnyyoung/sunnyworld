@@ -36,7 +36,7 @@ export default function AboutComponent() {
           About Sunny
         </div>
         <div className="subtitle">
-          "Shine brightly like the sunshine"
+          &ldquo;Shine brightly like the sunshine&rdquo;
         </div>
       </div>
 

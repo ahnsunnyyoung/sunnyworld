@@ -13,7 +13,7 @@ export default function MainSection() {
 
       <span className={`${styles.mainPosition}`}>Frontend Developer</span>
       <span className={`${styles.mainTitle}`}>Sunyoung Ahn</span>
-      <span className={`${styles.mainVision}`}>“Shine brightly like the sunshine”</span>
+      <span className={`${styles.mainVision}`}>&ldquo;Shine brightly like the sunshine&rdquo;</span>
 
     </section>
   )
