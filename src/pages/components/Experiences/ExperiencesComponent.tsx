@@ -28,7 +28,7 @@ export default function ExperiencesComponent() {
       "img": "/vaiv_logo.png",
       "img_alt": "Vaiv Logo",
       "moreLink": "https://www.vaiv.kr/",
-      "width": "30%"
+      "width": "47%"
     },
     {
       "title": "Myoungji University",
@@ -41,18 +41,25 @@ export default function ExperiencesComponent() {
       "tech": "Tensorflow / Python / Jupyter / Matlab / Anaconda / Linux / Docker",
       "img": "/myoungji_logo.png",
       "img_alt": "Myoungji Logo",
-      "width": "30%"
+      "width": "47%"
     },
     {
-      "title": "Starbucks",
-      "subtitle": "Barista",
-      "period": "Oct 2022 - present (8 months)",
+      "title": "Ravelist",
+      "subtitle": "Head of Engineering",
+      "period": "Nov 2023 - present (1 year, 5 months)",
       "contents": [
-        "Bakery sales, display, packaging, customer service, coffee/drink manufacturing"
+        "Responsible for all aspects of development, from planning to deployment.",
+        "Built the app from scratch using FlutterFlow and integrated Firebase backend services.",
+        "Created a fully responsive and intuitive UI/UX optimized for mobile users.",
+        "Handled backend architecture, data structure, authentication, and cloud functions.",
+        "Oversaw the entire release process, including testing and app store deployment.",
+        "Ensured scalability and maintainability through thoughtful design and documentation."
       ],
-      "img": "/starbucks_logo.png",
-      "img_alt": "Starbucks Logo",
-      "width": "30%"
+      "tech": "FlutterFlow / Flutter / Firebase / Branch.io / Google Maps API / Google Cloud Platform / iOS / Android",
+      "img": "/ravelist_logo.png",
+      "img_alt": "Ravelist Logo",
+      "moreLink": "https://ravelist.app.link",
+      "width": "100%"
     },
   ]
 

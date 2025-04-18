@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { TbSunFilled } from 'react-icons/tb';
 
 const navLinks = [
   {
@@ -34,14 +33,9 @@ function NavLink({to, children}: { to: string; children: any }) {
   </a>
 }
 
-function MobileNav({open, setOpen}: { open: boolean; setOpen: any }) {
+function MobileNav({open, setOpen}: { open: boolean; setOpen: (value: boolean) => void }) {
   return (
-      <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
-          <div className="flex items-center justify-center filter drop-shadow-md bg-gray-700/10 h-20"> {/*logo container*/}
-              <a className="flex items-center" href="#mainSection">
-                <TbSunFilled size={'2.5rem'}/>
-              </a>
-          </div>
+      <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md`}>
           <div className="flex flex-col ml-4">
               {navLinks.map((link, index) => {
                 return (
@@ -62,11 +56,7 @@ export default function Header() {
   return (
     <nav className="z-50 fixed flex filter px-4 pt-8 md:px-20 w-full h-20 items-center md:mix-blend-color-burn">
             <MobileNav open={open} setOpen={setOpen}/>
-            <div className="w-3/12 flex items-center">
-                <a className="hidden md:block text-2xl font-semibold" href="#mainSection">
-                  <TbSunFilled size={'4.5rem'}/>
-                </a>
-            </div>
+            
             <div className="w-9/12 flex justify-end items-center">
 
                 <div className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden" onClick={() => {
