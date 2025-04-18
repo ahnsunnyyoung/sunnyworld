@@ -5,6 +5,10 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  images: {
+    unoptimized: false,
+    domains: ['localhost'],
+  },
 }
 
 module.exports = nextConfig
