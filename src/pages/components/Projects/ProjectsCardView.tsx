@@ -7,13 +7,13 @@ export default function ProjectsCardView({ item }: { item: Project }) {
     (item) &&
       <div className={`${styles.cardView}`} style={{"width":item.width}}>
         <div className={`cardHeader`}>
-          <Image 
-            className={`${styles.cardIcon}`} 
-            src={item.img} 
-            alt={item.img_alt}
-            width={100}
-            height={100}
-          />
+          <div className={styles.imageContainer}>
+            <img 
+              className={`${styles.cardIcon}`} 
+              src={item.img} 
+              alt={item.img_alt}
+            />
+          </div>
           <div className={`cardTitleDiv flex-col`}>
             <span className={`${styles.title}`}>{item.title}</span>
             <span className={`${styles.period}`}>{item.period}</span>

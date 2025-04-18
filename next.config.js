@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   swcMinify: true,
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
   },
   images: {
-    unoptimized: false,
+    unoptimized: true,
     domains: ['localhost'],
   },
 }
